@@ -1,0 +1,67 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* BASE STYLES */
+html {
+  hanging-punctuation: first last;
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100svh;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-family: system-ui;
+}
+
+main {
+  width: min(65ch, 100% - 4rem);
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+li {
+  max-width: 65ch;
+  text-wrap: pretty;
+}
+
+img,
+picture,
+svg,
+video {
+  font-style: italic;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  shape-margin: 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+
+/* YOUR STYLES BELOW */
