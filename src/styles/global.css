@@ -8,10 +8,15 @@
 * {
   margin: 0;
   padding: 0;
-  font: inherit;
+  font-family: inherit;
 }
 
 /* BASE STYLES */
+:root {
+  --main-bg-color: #22232a;
+  --main-tetx-color: white;
+}
+
 html {
   hanging-punctuation: first last;
   color-scheme: dark light;
@@ -21,7 +26,10 @@ body {
   min-height: 100svh;
   font-size: 1.125rem;
   line-height: 1.6;
-  font-family: system-ui;
+  font-family: system-ui, sans-serif;
+  margin: 2rem;
+  background-color: var(--main-bg-color);
+  color: var(--main-tetx-color);
 }
 
 main {
@@ -44,6 +52,10 @@ li {
   text-wrap: pretty;
 }
 
+a {
+  text-decoration: none;
+}
+
 img,
 picture,
 svg,
@@ -57,6 +69,12 @@ video {
   shape-margin: 1rem;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2rem;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;
@@ -65,3 +83,20 @@ video {
 }
 
 /* YOUR STYLES BELOW */
+.ascii-art {
+  font-family: monospace;
+  white-space: pre;
+}
+
+.welcome-section {
+  margin-top: 4rem;
+}
+.welcome-message {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* UTILITY */
+.visually-hidden {
+  display: none;
+}

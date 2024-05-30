@@ -1,17 +1,31 @@
 ---
 import '../styles/global.css';
-const pageTitle = 'Home';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = 'Home - Personal website of Mauro Di Ianni';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <h1>mauromotion</h1>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <main>
+    <section class="welcome-section">
+      <h2>Welcome to my personal website.</h2>
+      <p class="welcome-message">
+        My name is <a href="/about/">Mauro Di Ianni</a>. Former motion designer,
+        current web developer, indieweb advocate, GNU Linux enthusiast, music
+        and art lover. <br /><br /> See what I'm doing
+        <a href="/now/">Now</a> or read my latest ramblings on the <a
+          href="/blog/">Blog</a
+        >.
+      </p>
+    </section>
+    <hr />
+    <section class="latest-posts">
+      <h3>Recent Posts</h3>
+      <ul>
+        <li><a href="#">A blog post here</a></li>
+        <li><a href="#">A blog post here</a></li>
+        <li><a href="#">A blog post here</a></li>
+        <li><a href="#">A blog post here</a></li>
+      </ul>
+    </section>
+  </main>
+</BaseLayout>
