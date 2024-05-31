@@ -69,13 +69,6 @@ video {
   shape-margin: 1rem;
 }
 
-footer {
-  position: relative;
-  bottom: 0;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;
@@ -84,18 +77,6 @@ footer {
 }
 
 /* YOUR STYLES BELOW */
-.ascii-art {
-  font-family: monospace;
-  white-space: pre;
-}
-
-.welcome-section {
-  margin-top: 4rem;
-}
-.welcome-message {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
 
 /* UTILITY */
 .visually-hidden {
