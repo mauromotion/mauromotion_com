@@ -1,9 +1,21 @@
 ---
-import '../styles/global.css';
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Now - What I'm currently doing";
+import BlogPost from '../components/BlogPost.astro';
+const allPosts = await getCollection('now');
+const pageTitle = 'Now';
+
+// Sort posts in reverse chronological order
+allPosts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <p>Now content here.</p>
+  <ul>
+    {
+      allPosts.map((post) => (
+        <BlogPost url={`/posts/${post.slug}/`} title={post.data.title} />
+      ))
+    }
+  </ul>
 </BaseLayout>

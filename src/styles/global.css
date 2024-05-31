@@ -70,9 +70,10 @@ video {
 }
 
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {

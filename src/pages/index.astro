@@ -1,7 +1,16 @@
 ---
-import '../styles/global.css';
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+const allPosts = await getCollection('posts');
 const pageTitle = 'Home - Personal website of Mauro Di Ianni';
+
+// Sort posts in reverse chronological order
+allPosts.sort(
+  (a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate),
+);
+
+const postsAmount = 4;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -21,10 +30,17 @@ const pageTitle = 'Home - Personal website of Mauro Di Ianni';
     <section class="latest-posts">
       <h3>Recent Posts</h3>
       <ul>
-        <li><a href="#">A blog post here</a></li>
-        <li><a href="#">A blog post here</a></li>
-        <li><a href="#">A blog post here</a></li>
-        <li><a href="#">A blog post here</a></li>
+        {
+          allPosts
+            .slice(0, postsAmount)
+            .map((post) => (
+              <BlogPost
+                url={`/posts/${post.slug}/`}
+                title={post.data.title}
+                date={post.data.title}
+              />
+            ))
+        }
       </ul>
     </section>
   </main>

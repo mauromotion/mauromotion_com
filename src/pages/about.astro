@@ -1,9 +1,54 @@
 ---
-import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = 'About me';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>About content here.</p>
+  <section class="about-section">
+    <p>
+      My name is Mauro and I work as a motion designer, actually freelancing
+      around London, UK. You can have a look at my portfolio here: <a
+        href="https://mauromotion.com">mauromotion.com</a
+      >.
+    </p>
+    <br />
+    <h3 id="music">Music</h3>
+
+    <p>
+      I also have a lifelong passion for music, jazz and its round abouts in
+      particular but I tend to discover interesting new stuff pretty often in
+      various other genres.
+    </p>
+    <br />
+    <h3 id="mastodon">Mastodon</h3>
+
+    <p>
+      Along with my many interests I actually run a <a
+        href="https://joinmastodon.org/">Mastodon</a
+      > server on <a href="https://mograph.social">mograph.social</a>. This is
+      an experiment aimed at trying to build a space for motion designers, VFX
+      artists and similar outside of the mainstream platforms like Twitter or
+      Facebook and bring some visual excitment into the <a
+        href="https://fediverse.party/en/fediverse/">Fediverse</a
+      >.
+    </p>
+    <br />
+    <h3 id="this-website">This website</h3>
+
+    <p>
+      The idea with this website is to create a repository of a few things I
+      discover in any of the fields I’m interested in, be it motion design,
+      music, privacy, PKM systems (Personal Knowledge Management).
+    </p>
+
+    <p>
+      Also, I might use this space to post some work in progress and experiments
+      I do with moving (or static) images.
+    </p>
+
+    <p>
+      Overall, I wish this space to become a little piece of the web for myself
+      in the spirit of the <a href="https://indieweb.org/">IndieWeb</a>.
+    </p>
+  </section>
 </BaseLayout>
