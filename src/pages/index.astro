@@ -24,34 +24,32 @@ const postsAmount = 4;
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
-  <main>
-    <section class="welcome-section">
-      <h2>Welcome to my personal website.</h2>
-      <p class="welcome-message">
-        My name is <a href="/about/">Mauro Di Ianni</a>. Former motion designer,
-        current web developer, indieweb advocate, GNU Linux enthusiast, music
-        and art lover. <br /><br /> See what I'm doing
-        <a href="/now/">Now</a> or read my latest ramblings on the <a
-          href="/blog/">Blog</a
-        >.
-      </p>
-    </section>
-    <hr />
-    <section class="latest-posts">
-      <h3>Recent Posts</h3>
-      <ul>
-        {
-          allPosts
-            .slice(0, postsAmount)
-            .map((post) => (
-              <BlogPost
-                url={`/posts/${post.slug}/`}
-                title={post.data.title}
-                date={post.data.title}
-              />
-            ))
-        }
-      </ul>
-    </section>
-  </main>
+  <section class="welcome-section">
+    <h3>Welcome to my personal website!</h3>
+    <p class="welcome-message">
+      My name is <a href="/about/">Mauro Di Ianni</a>. Former motion designer,
+      currently working my way into web dev, indieweb advocate, GNU Linux
+      enthusiast, music and art lover. <br /><br /> See what I'm doing
+      <a href="/now/">Now</a> or read my latest ramblings on the <a
+        href="/blog/">Blog</a
+      >.
+    </p>
+  </section>
+  <hr />
+  <section class="latest-posts">
+    <h3>Recent Posts</h3>
+    <ul>
+      {
+        allPosts
+          .slice(0, postsAmount)
+          .map((post) => (
+            <BlogPost
+              url={`/posts/${post.slug}/`}
+              title={post.data.title}
+              date={post.data.title}
+            />
+          ))
+      }
+    </ul>
+  </section>
 </BaseLayout>

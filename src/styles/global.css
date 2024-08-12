@@ -13,23 +13,29 @@
 
 /* BASE STYLES */
 :root {
-  --main-bg-color: #22232a;
-  --main-tetx-color: white;
+  /* --main-bg-color: #22232a; */
+  --main-bg-color: #e8e9ea;
+  --main-text-color: #424242;
+  --accent-color: #e59700;
+  /* --main-tetx-color: white; */
 }
 
 html {
   hanging-punctuation: first last;
-  color-scheme: dark light;
+  /* color-scheme: dark light; */
 }
 
 body {
   min-height: 100svh;
   font-size: 1.125rem;
   line-height: 1.6;
-  font-family: system-ui, sans-serif;
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 2rem;
   background-color: var(--main-bg-color);
-  color: var(--main-tetx-color);
+  color: var(--main-text-color);
 }
 
 main {
@@ -54,6 +60,11 @@ li {
 
 a {
   text-decoration: none;
+  color: var(--accent-color);
+}
+
+a:hover {
+  color: grey;
 }
 
 img,
@@ -77,6 +88,8 @@ video {
 }
 
 /* YOUR STYLES BELOW */
+
+/* the styles are inside the individual relevant components' files */
 
 /* UTILITY */
 .visually-hidden {

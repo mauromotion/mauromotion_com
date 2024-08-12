@@ -4,13 +4,27 @@
 
 <style>
   footer {
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 16px;
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 40px 20px;
+    position: fixed;
     bottom: 0;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
   }
 </style>
 
 <footer>
-  <span> © 2024 - Mauro Di Ianni.</span><span>Handcrafted with Astro.</span>
+  <!-- <span> © 2024 - Mauro Di Ianni.</span><span>Handcrafted with Astro.</span> -->
+  <span>© 2024 Mauro Di Ianni </span><span>• all articles under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Commons CC BY-NC-SA 4.0</a> license</span> <span>• handcrafted with Astro and vanilla CSS.</span>
 </footer>

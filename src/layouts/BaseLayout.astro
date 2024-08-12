@@ -8,6 +8,11 @@ const { pageTitle } = Astro.props;
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css?family=lora:500,500i,600,600i"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="robots" content="noindex, nofollow, noai, noimageai" />
@@ -17,7 +22,9 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
     <a
       rel="me"

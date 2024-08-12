@@ -2,9 +2,27 @@
 import Navigation from './Navigation.astro';
 ---
 
+<style>
+  header {
+    text-align: center;
+    margin: 2rem;
+  }
+
+  header h1 {
+    margin: 2rem;
+    font-style: italic;
+    font-size: 4rem;
+  }
+  header a {
+    color: #424242;
+  }
+
+  header a:hover {
+    color: #e59700;
+  }
+</style>
+
 <header>
-  <nav>
-    <Navigation />
-  </nav>
-  <h1 class="mauromotion-title"><a href="/">mauromotion</a></h1>
+  <Navigation />
+  <h1 class="mauromotion-title"><a href="/">MauroMotion</a></h1>
 </header>
