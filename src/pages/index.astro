@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 const allPosts = await getCollection('posts');
-const pageTitle = 'Home - Personal website of Mauro Di Ianni';
+const pageTitle = 'Home';
 
 // Sort posts in reverse chronological order
 allPosts.sort(
@@ -15,15 +15,26 @@ const postsAmount = 4;
 
 <style>
   .welcome-section {
-    margin-top: 4rem;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
   }
   .welcome-message {
-    /* font-size: 1.5rem; */
     margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .latest-posts {
-    margin: 6rem 4rem 6rem 4rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
+  #all-posts {
+    position: absolute;
+    top: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    margin-top: 3rem;
   }
 </style>
 
@@ -32,7 +43,7 @@ const postsAmount = 4;
     <h3>Welcome to my personal website!</h3>
     <p class="welcome-message">
       My name is <a href="/about/">Mauro Di Ianni</a>. Former motion designer,
-      currently working my way into web development. Indieweb advocate, Linux
+      currently working my way into web development. Small web advocate, Linux
       enthusiast, music and art lover. <br /><br /> See what I'm doing
       <a href="/now/">Now</a> or read my latest ramblings on the <a
         href="/blog/">Blog</a
@@ -41,6 +52,7 @@ const postsAmount = 4;
   </section>
   <section class="latest-posts">
     <h3>Recent Posts</h3>
+    <hr />
     <ul>
       {
         allPosts
@@ -49,10 +61,12 @@ const postsAmount = 4;
             <BlogPost
               url={`/posts/${post.slug}/`}
               title={post.data.title}
-              date={post.data.title}
+              pubDate={post.data.pubDate}
+              tags={post.data.tags}
             />
           ))
       }
     </ul>
+    <a id="all-posts" href="/blog/">All posts</a>
   </section>
 </BaseLayout>

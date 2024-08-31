@@ -14,7 +14,7 @@ _Updates on my monthly plays from Lastfm._
 
 A month of hot weather, lots of programming, yelling at the screen and classic hard bop jazz. What a ride. Glad the Autumn is coming, my favourite season.
 
-![lastfm Albums Chart August 2023](/assets/images/2023_08_Aug_lastfm_chart.jpg)
+![lastfm Albums Chart August 2023](../../assets/images/posts/2023-01-08-monthly-lastfm-albums-charts/2023_08_Aug_lastfm_chart.jpg)
 
 1\. Miles Davis - _Ascenseur Pour L'échafaud_<br>
 2\. Mort Garson - _Journey to the Moon and Beyond_<br>
@@ -46,7 +46,7 @@ A month of hot weather, lots of programming, yelling at the screen and classic h
 
 A somewhat slow and fast month at the same time for me, not my brightest moment. Miles helped me a lot through it, though. And quite a few new jazz releases. Most of all, one of my favourite artists in recent times just released another good record, Kaidi Tatham - The Only Way. My summer's banger without a doubt.
 
-![lastfm Albums Chart July 2023](/assets/images/2023_07_July_lastfm_chart.jpg)
+![lastfm Albums Chart July 2023](../../assets/images/posts/2023-01-08-monthly-lastfm-albums-charts/2023_07_July_lastfm_chart.jpg)
 
 1\. Kaidi Tatham - _The Only Way_<br>
 2\. Alfa Mist - _Variables_<br>
@@ -78,7 +78,7 @@ A somewhat slow and fast month at the same time for me, not my brightest moment.
 
 Half of this month of June was spent in Italy on holiday, I mostly listened to music saved locally on my iPhone, so not much new stuff.
 
-![lastfm Albums Chart June 2023](/assets/images/2023_06_June_lastfm_chart.jpg)
+![lastfm Albums Chart June 2023](../../assets/images/posts/2023-01-08-monthly-lastfm-albums-charts/2023_06_June_lastfm_chart.jpg)
 
 1\. The Human Abstract - _Nocturne_<br>
 2\. Alfa Mist - _Variables_<br>
@@ -110,7 +110,7 @@ Half of this month of June was spent in Italy on holiday, I mostly listened to m
 
 Finally the sun is here. Time for some Megadeth I guess. And jazz, lots of jazz.
 
-![lastfm Albums Chart May 2023](/assets/images/2023_05_May_lastfm_chart.jpg)
+![lastfm Albums Chart May 2023](../../assets/images/posts/2023-01-08-monthly-lastfm-albums-charts/2023_05_May_lastfm_chart.jpg)
 
 1\. Alfa Mist - _Variables_<br>
 2\. The Gaslamp Killer - _Legna_<br>
@@ -153,7 +153,7 @@ Finally the sun is here. Time for some Megadeth I guess. And jazz, lots of jazz.
 
 A mix of old nostalgia stuff and some new spins in April as well. The new Metallica is awful as usual.
 
-![lastfm Albums Chart April 2023](/assets/images/2023_04_Apr_lastfm_chart.jpg)
+![lastfm Albums Chart April 2023](../../assets/images/posts/2023-01-08-monthly-lastfm-albums-charts/2023_04_Apr_lastfm_chart.jpg)
 
 1\. James Holden - _Imagine This Is A High Dimensional Space of All Possibilities_<br>
 2\. Green Day - _Nimrod_<br>
@@ -185,7 +185,7 @@ A mix of old nostalgia stuff and some new spins in April as well. The new Metall
 
 This month again went to show off my usual mix of jazz/metal/electronic/videogames/random stuff. AKA I'm not sure where to go but I go there with style. Also, the spring still looks like a distant mirage over here.
 
-![lastfm Albums Chart March 2023](/assets/images/2023_03_Mar_lastfm_chart.jpg)
+![lastfm Albums Chart March 2023](../../assets/images/posts/2023-01-08-monthly-lastfm-albums-charts/2023_03_Mar_lastfm_chart.jpg)
 
 1\. Boards of Canada - _Tomorrow's Harvest_<br>
 2\. Megadeth - _Countdown to Extinction_<br>
@@ -228,7 +228,7 @@ This month again went to show off my usual mix of jazz/metal/electronic/videogam
 
 It was a videogame 8-bit soundtracks kind of month. And also the month I discovered _Woods of Ypress_ and got myself into a doom hole. Fair enough. Let's move on with the Spring, please.
 
-![lastfm Albums Chart February 2023](/assets/images/2023_02_Feb_lastfm_chart.jpg)
+![lastfm Albums Chart February 2023](../../assets/images/posts/2023-01-08-monthly-lastfm-albums-charts/2023_02_Feb_lastfm_chart.jpg)
 
 1\. Ben Prunty - _Into the Breach Soundtrack_<br>
 2\. Woods of Ypress - _Woods 4: The Green Album_<br>
@@ -260,7 +260,7 @@ It was a videogame 8-bit soundtracks kind of month. And also the month I discove
 
 This month as well has been hectic music-wise. Turns out when I'm studying I have less mental energy to porper listening to music. When I code it's just a background. Still some blasts from teh past nonetheless. And very few new albums. A slow starting year indeed.
 
-![lastfm Albums Chart January 2023](/assets/images/2023_01_Jan_lastfm_chart.jpg)
+![lastfm Albums Chart January 2023](../../assets/images/posts/2023-01-08-monthly-lastfm-albums-charts/2023_01_Jan_lastfm_chart.jpg)
 
 1\. Hudson Mohawke - _Cry Sugar_<br>
 2\. Kamelot - _Karma_<br>
@@ -292,7 +292,7 @@ This month as well has been hectic music-wise. Turns out when I'm studying I hav
 
 December has been a weird one as I've been traveling and away from my desktop (and music gear). Lots of throw backs into power metal, 90s music, mixed with relistens of this year's favourites. To a 2023 full of good music.
 
-![lastfm Albums Chart December 2022](/assets/images/december_chart.jpg)
+![lastfm Albums Chart December 2022](../../assets/images/posts/2023-01-08-monthly-lastfm-albums-charts/december_chart.jpg)
 
 1\. SAULT - _11_ <br>
 2\. Various Artists - _Artificial Intelligence_ <br>
@@ -324,7 +324,7 @@ December has been a weird one as I've been traveling and away from my desktop (a
 
 It's definitely been a SAULT month, considering they released 5 albums at the same time and they're all good, it was quite predictable. This month almost no jazz, with the exception of Bill Frisell (a delightful album, but when did he made a bad one anyway?) and a re-listen of the latest Sun Ra Arkestra which is growing on me. Lots of electronica that kept me company during this cold month of studying and working at my computer most days (and nights). Some 90s nostalgia for good measure.
 
-![lastfm Albums Chart November 2022](/assets/images/november_chart.jpg)
+![lastfm Albums Chart November 2022](../../assets/images/posts/2023-01-08-monthly-lastfm-albums-charts/november_chart.jpg)
 
 1\. SAULT - _UNTITLED (God)_ <br>
 2\. SAULT - _11_ <br>
@@ -365,7 +365,7 @@ It's definitely been a SAULT month, considering they released 5 albums at the sa
 
 ## October 2022
 
-![lastfm Albums Chart October 2022](/assets/images/october_chart.jpg)
+![lastfm Albums Chart October 2022](../../assets/images/posts/2023-01-08-monthly-lastfm-albums-charts/october_chart.jpg)
 
 1\. Surprise Chef - _Education & Recreation_ <br>
 2\. Makaya McCraven - _In These Times_ <br>
@@ -406,7 +406,7 @@ It's definitely been a SAULT month, considering they released 5 albums at the sa
 
 ## September 2022
 
-![lastfm Albums Chart September 2022](/assets/images/september_chart.jpg)
+![lastfm Albums Chart September 2022](../../assets/images/posts/2023-01-08-monthly-lastfm-albums-charts/september_chart.jpg)
 
 1\. Stereolab - _Emperor Tomato Ketchup_ <br>
 2\. Brian Eno - _Film Music 1976 ~ 2020_ <br>
@@ -447,7 +447,7 @@ It's definitely been a SAULT month, considering they released 5 albums at the sa
 
 ## August 2022
 
-![lastfm Albums Chart August 2022](/assets/images/07_August_2022_topsters3.jpg)
+![lastfm Albums Chart August 2022](../../assets/images/posts/2023-01-08-monthly-lastfm-albums-charts/07_August_2022_topsters3.jpg)
 
 1\. Kokoroko - _Could We Be More_ <br>
 2\. Kaidi Tatham - _Don't Rush The Process_ <br>

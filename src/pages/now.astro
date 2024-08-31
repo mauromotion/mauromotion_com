@@ -2,19 +2,40 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
+// import { Content as LatestPost } from '../content/now/2024-05-23-now.md';
 const allPosts = await getCollection('now');
 const pageTitle = 'Now';
 
 // Sort posts in reverse chronological order
-allPosts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+allPosts.sort(
+  (a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate),
+);
+const latestNow = allPosts[0];
+const allPostsMinusLatest = allPosts.slice(1);
+const { Content } = await latestNow.render();
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>Now content here.</p>
+  <h1>{pageTitle}</h1>
+  <p>
+    To replace the social media updates I keep this page inspired by <a
+      href="http://sivers.org">Derek Sivers</a
+    >
+    and the <a href="https://nownownow.com/about">now page movement</a>.
+  </p>
+  <hr />
+  <Content />
+  <hr />
+  <h2>Previous updates</h2>
   <ul>
     {
-      allPosts.map((post) => (
-        <BlogPost url={`/posts/${post.slug}/`} title={post.data.title} />
+      allPostsMinusLatest.map((post) => (
+        <BlogPost
+          url={`/nows/${post.slug}/`}
+          title={post.data.title}
+          pubDate={post.data.pubDate}
+          tags={post.data.tags}
+        />
       ))
     }
   </ul>

@@ -12,11 +12,18 @@ allPosts.sort(
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>Blog content here.</p>
+  <h1>{pageTitle}</h1>
+  <h2>Recent posts</h2>
+  <hr />
   <ul>
     {
       allPosts.map((post) => (
-        <BlogPost url={`/posts/${post.slug}/`} title={post.data.title} />
+        <BlogPost
+          url={`/posts/${post.slug}/`}
+          title={post.data.title}
+          pubDate={post.data.pubDate}
+          tags={post.data.tags}
+        />
       ))
     }
   </ul>

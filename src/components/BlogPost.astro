@@ -1,7 +1,48 @@
 ---
-const { url, title, pubDate, description } = Astro.props;
+const { url, title, pubDate, description, tags } = Astro.props;
+const options = { day: 'numeric', month: 'short', year: 'numeric' };
+const formattedDate = pubDate.toLocaleDateString('en-GB', options);
+
+const maxTitleLength = 50; // Adjust the max length as needed
+
+function truncateText(text, maxLength) {
+  if (text.length > maxLength) {
+    return text.slice(0, maxLength) + '...';
+  }
+  return text;
+}
+
+const truncatedTitle = truncateText(title, maxTitleLength);
 ---
 
+<style>
+  li {
+    /* width: max-content; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0;
+    border-bottom: 1px dashed var(--main-text-color);
+    gap: 2rem;
+  }
+  li:hover {
+
+    border-bottom: 1px solid var(--main-text-color);
+  }
+  .tags a {
+    color: var(--color-green);
+  }
+  .tags a:hover {
+    color: var(--color-yellow);
+  }
+</style>
+
 <li>
-  <a href={url}>{title}</a><p>{pubDate}</p>
+  <a href={url}>{truncatedTitle}</a><p>{formattedDate}</p>
+  <div class="tags visually-hidden">
+    {tags.map((tag) => (
+    <p class="tag"><a href=`/tags/${tag}`>{tag}</a></p>
+      ))}
+  </div>
 </li>

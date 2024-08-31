@@ -4,27 +4,25 @@ import Navigation from './Navigation.astro';
 
 <style>
   header {
-    text-align: center;
-    margin: 2rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    /* text-align: center; */
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    background-color: var(--darker-bg-color);
   }
 
-  header h1 {
-    margin: 4rem;
-    /* font-family: 'Orbitron'; */
-    /* font-style: italic; */
-    font-size: 4rem;
-    text-align: center;
-  }
-  header a {
-    color: fuchsia;
+  #mauromotion-title a {
+    color: var(--color-green);
   }
 
-  header a:hover {
-    color: cyan;
+  #mauromotion-title a:hover {
+    color: var(--color-yellow);
   }
 </style>
 
 <header>
+  <h2 id="mauromotion-title"><a href="/">mauromotion</a></h2>
   <Navigation />
-  <h1 class="mauromotion-title"><a href="/">mauromotion</a></h1>
 </header>

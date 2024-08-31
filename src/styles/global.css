@@ -13,10 +13,14 @@
 
 /* BASE STYLES */
 :root {
-  --main-bg-color: #22232a;
-  --main-text-color: #ebfafe;
-  --accent-color: fuchsia;
-  /* --main-tetx-color: white; */
+  --main-bg-color: #3b4252;
+  --darker-bg-color: #2e3440;
+  --main-text-color: #d8dee9;
+  --lighter-text-color: #eceff4;
+  --color-cyan: #88c0d0;
+  --color-magenta: #b48ead;
+  --color-yellow: #ebcb8b;
+  --color-green: #a3be8c;
 }
 
 html {
@@ -39,7 +43,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 2rem;
+  /* margin: 2rem; */
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
   margin-block-end: 0;
@@ -83,11 +87,11 @@ ol[role='list'] {
 
 a {
   text-decoration: none;
-  color: var(--accent-color);
+  color: var(--color-cyan);
 }
 
 a:hover {
-  color: cyan;
+  color: var(--color-magenta);
 }
 
 /* A elements that don't have a class get default styles */
@@ -107,6 +111,13 @@ video {
   /* background-repeat: no-repeat; */
   /* background-size: cover; */
   shape-margin: 1rem;
+}
+
+hr {
+  border-bottom: 2px solid var(--main-text-color);
+  filter: opacity(0.5);
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
