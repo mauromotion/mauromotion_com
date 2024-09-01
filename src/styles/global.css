@@ -36,14 +36,13 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
   font-family:
-    'Source Sans Pro',
+    'Fira Sans',
     sans serif;
   font-size: 1.3rem;
   text-align: rigth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* margin: 2rem; */
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
   margin-block-end: 0;
@@ -135,6 +134,12 @@ figcaption {
   margin-bottom: 2rem;
 }
 
+#filler {
+  background-color: var(--darker-bg-color);
+  position: relative;
+  height: 200px;
+  top: 0;
+}
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;

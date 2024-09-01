@@ -10,7 +10,7 @@ const { pageTitle } = Astro.props;
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link
-      href="https://fonts.bunny.net/css?family=source-sans-pro:400,700"
+      href="https://fonts.bunny.net/css?family=fira-sans:400,700"
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -38,5 +38,7 @@ const { pageTitle } = Astro.props;
       aria-hidden="true"
       href="https://mograph.social/@mauro">Mastodon verification link</a
     >
+    <!-- FIXME: this is an horrid hack -->
+    <div aria-hidden="true" id="filler"><p></p></div>
   </body>
 </html>
