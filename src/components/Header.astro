@@ -7,22 +7,23 @@ import Navigation from './Navigation.astro';
     display: flex;
     align-items: baseline;
     justify-content: space-around;
-    /* text-align: center; */
     margin-bottom: 2rem;
     padding: 0.5rem;
-    background-color: var(--darker-bg-color);
+    border-bottom-width: 1px;
+    border-bottom-color: var(--dark-text);
+    border-bottom-style: solid;
   }
 
-  #mauromotion-title a {
-    color: var(--color-green);
-  }
-
-  #mauromotion-title a:hover {
-    color: var(--color-yellow);
+  #logotype {
+    width: 20rem;
   }
 </style>
 
 <header>
-  <h2 id="mauromotion-title"><a href="/">mauromotion</a></h2>
+  <div id="logotype">
+    <h2>
+      <a href="/">Mauromotion</a>
+    </h2>
+  </div>
   <Navigation />
 </header>

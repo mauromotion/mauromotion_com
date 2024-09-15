@@ -14,16 +14,16 @@ const postsAmount = 4;
 ---
 
 <style>
-  .welcome-section {
-    margin-top: 8rem;
-    margin-bottom: 4rem;
+  #welcome-section {
+    /* margin-top: 8rem; */
+    /* margin-bottom: 4rem; */
   }
-  .welcome-message {
+  #welcome-message {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
 
-  .latest-posts {
+  #recent-posts {
     margin-top: 6rem;
     margin-bottom: 6rem;
   }
@@ -34,14 +34,14 @@ const postsAmount = 4;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 2rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
-  <section class="welcome-section">
+  <section id="welcome-section">
     <h3>Welcome to my personal website!</h3>
-    <p class="welcome-message">
+    <p id="welcome-message">
       My name is <a href="/about/">Mauro Di Ianni</a>. Former motion designer,
       currently working my way into web development. Small web advocate, Linux
       enthusiast, music and art lover. <br /><br /> See what I'm doing
@@ -50,7 +50,7 @@ const postsAmount = 4;
       >.
     </p>
   </section>
-  <section class="latest-posts">
+  <section id="recent-posts">
     <h3>Recent Posts</h3>
     <hr />
     <ul>

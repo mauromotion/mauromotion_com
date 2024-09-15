@@ -6,20 +6,30 @@ const { frontmatter } = Astro.props;
 <style>
   .tags {
     display: flex;
+    margin: 1rem 0 1rem 0;
+    gap: .5rem;
   }
 
   .tag {
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: .85rem;
+    font-weight: 700;
     background-color: var(--darker-bg-color);
     border-radius: 4px;
-    margin: .5rem;
-    padding: .3rem .5rem .3rem .5rem;
+    padding: .2rem .5rem .2rem .5rem;
+  }
+
+  .post-title {
+    background-color: pink;
+    padding: 0rem 2rem 0.5rem 2rem;
+    border-radius: 6px;
   }
 </style>
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <h1>{frontmatter.title}</h1>
+  <div class="post-title">
+    <h1>{frontmatter.title}</h1>
+  </div>
   <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
   <p><em>{frontmatter.description}</em></p>
 

@@ -4,19 +4,16 @@
 
 <style>
   footer {
-    background-color: var(--darker-bg-color);
+    background-color: var(--dark-bg);
+    color: var(--light-text);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items:baseline;
     font-size: 16px;
-    /* max-width: 1200px; */
     padding: 40px 20px;
     position:relative;
-    /* bottom: 0; */
-    /* left: 0; */
     width: max-width;
-    /* z-index: 1000; */
     gap: 0.5rem;
     margin-block-start: 4rem;
     padding-block: 4rem;
@@ -26,6 +23,10 @@
     display: flex;
     font-size:larger;
     gap: 1rem;
+  }
+  footer a {
+    color: var(--light-text);
+    font-weight: bold;
   }
 @media (max-width: 768px) {
   footer {

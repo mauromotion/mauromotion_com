@@ -13,14 +13,13 @@
 
 /* BASE STYLES */
 :root {
-  --main-bg-color: ghostwhite;
-  --darker-bg-color: gainsboro;
-  --main-text-color: dimgray;
-  --lighter-text-color: darkgrey;
-  --color-cyan: #88c0d0;
-  --color-magenta: #b48ead;
-  --color-yellow: #ebcb8b;
-  --color-green: #a3be8c;
+  --light-bg: #efe8e3;
+  --dark-bg: #242424;
+  --dark-text: #242424;
+  --light-text: #efe8e3;
+  --accent-orange: #e66937;
+  --accent-lightorange: #f0b979;
+  --accent-cyan: #9dceca;
 }
 
 html {
@@ -50,8 +49,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
+  background-color: var(--light-bg);
+  color: var(--dark-text);
   margin-block-end: 0;
 }
 
@@ -66,8 +65,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-figcaption {
+h6 {
   text-wrap: balance;
   text-align: start;
   margin-block-end: 0;
@@ -101,11 +99,13 @@ ol {
 
 a {
   text-decoration: none;
-  color: var(--color-cyan);
+  color: var(--dark-text);
 }
 
 a:hover {
-  color: var(--color-magenta);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  color: var(--accent-orange);
 }
 
 /* A elements that don't have a class get default styles */
@@ -122,16 +122,14 @@ video {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
   shape-margin: 1rem;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
 
 hr {
-  border-bottom: 2px solid var(--main-text-color);
-  filter: opacity(0.5);
+  border-bottom: 1px solid var(--dark-text);
+  /* filter: opacity(0.5); */
   margin-top: 0.5rem;
   margin-bottom: 2rem;
 }
@@ -143,7 +141,7 @@ figcaption {
 }
 
 #filler {
-  background-color: var(--darker-bg-color);
+  background-color: var(--dark-bg);
   position: relative;
   height: 200px;
   top: 0;
