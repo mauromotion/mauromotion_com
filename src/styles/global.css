@@ -13,10 +13,10 @@
 
 /* BASE STYLES */
 :root {
-  --main-bg-color: #3b4252;
-  --darker-bg-color: #2e3440;
-  --main-text-color: #d8dee9;
-  --lighter-text-color: #eceff4;
+  --main-bg-color: ghostwhite;
+  --darker-bg-color: gainsboro;
+  --main-text-color: dimgray;
+  --lighter-text-color: darkgrey;
   --color-cyan: #88c0d0;
   --color-magenta: #b48ead;
   --color-yellow: #ebcb8b;
@@ -29,6 +29,13 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+}
+
+body > :is(header, footer),
+main,
+section,
+article {
+  container-type: inline-size;
 }
 
 body {
@@ -59,7 +66,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+figcaption {
   text-wrap: balance;
   text-align: start;
   margin-block-end: 0;
