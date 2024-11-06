@@ -19,16 +19,21 @@ const truncatedTitle = truncateText(title, maxTitleLength);
   li {
     /* width: max-content; */
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: .5rem 0;
     border-bottom: 1px dashed var(--main-text-color);
-    gap: 2rem;
   }
   li:hover {
 
     border-bottom: 1px solid var(--main-text-color);
+  }
+
+  .post-date {
+    font-size: smaller;
+    font-weight: bold;
   }
   .tags a {
     color: var(--color-green);
@@ -39,7 +44,8 @@ const truncatedTitle = truncateText(title, maxTitleLength);
 </style>
 
 <li>
-  <a href={url}>{truncatedTitle}</a><p>{formattedDate}</p>
+  <p class="post-date">{formattedDate}</p>
+  <a href={url}>{truncatedTitle}</a>
   <div class="tags visually-hidden">
     {tags.map((tag) => (
     <p class="tag"><a href=`/tags/${tag}`>{tag}</a></p>
