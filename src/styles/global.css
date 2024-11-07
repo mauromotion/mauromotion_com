@@ -41,9 +41,7 @@ body {
   min-height: 100svh;
   font-size: 1.125rem;
   line-height: 1.5;
-  font-family:
-    'Inter',
-    sans serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.3rem;
   text-align: rigth;
   text-rendering: optimizeLegibility;
@@ -160,6 +158,10 @@ figcaption {
 }
 
 /* YOUR STYLES BELOW */
+
+.page-title {
+  font-size: 5rem;
+}
 
 /* the styles are inside the individual relevant components' files */
 

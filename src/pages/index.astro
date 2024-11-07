@@ -20,8 +20,7 @@ const postsAmount = 4;
     margin-bottom: 2rem;
   }
   #welcome-message {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
   }
 
   #welcome-message a {
@@ -30,17 +29,23 @@ const postsAmount = 4;
   }
 
   #recent-posts {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  #recent-posts-title {
+    border-bottom: 1px solid var(--dark-bg);
+    margin-bottom: 1rem;
   }
 
   #all-posts {
-    position: absolute;
-    top: auto;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 2rem;
+    padding: 1rem 1.5rem;
     margin-top: 4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    /* margin-top: 4rem; */
   }
 </style>
 
@@ -57,8 +62,7 @@ const postsAmount = 4;
     </p>
   </section>
   <section id="recent-posts">
-    <h3>Recent Posts</h3>
-    <hr />
+    <h3 id="recent-posts-title">Recent Posts</h3>
     <ul>
       {
         allPosts
@@ -73,6 +77,6 @@ const postsAmount = 4;
           ))
       }
     </ul>
-    <a id="all-posts" href="/blog/">All posts</a>
   </section>
+  <a id="all-posts" href="/blog/">View all posts</a>
 </BaseLayout>
