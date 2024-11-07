@@ -3,8 +3,27 @@ const { id = '' } = Astro.props;
 ---
 
 <style>
-  #theme-toggle .fa-moon:hover {
+  /* Common styles for the icon */
+  .theme-icon {
+    font-size: 1.5rem; /* Adjust size */
+    font-family: 'Font Awesome 5 Free', sans-serif; /* Ensure correct Font Awesome font */
+    font-style: normal;
+    font-weight: 900; /* Ensure solid weight */
+    line-height: 1; /* Remove line-height issues */
+    display: inline-block; /* Ensure correct positioning */
+    vertical-align: middle; /* Align icon vertically */
+  }
+
+  /* Default light mode: Show moon icon */
+  html[data-theme='light'] .theme-icon::before {
+    content: '\f186'; /* Font Awesome moon icon */
     color: var(--color-accent-cyan);
+  }
+
+  /* Dark mode: Show sun icon */
+  html[data-theme='dark'] .theme-icon::before {
+    content: '\f185'; /* Font Awesome sun icon */
+    color: var(--color-accent-orange);
   }
 
   .theme-switch input {
@@ -16,7 +35,7 @@ const { id = '' } = Astro.props;
   <label class="theme-switch" for="checkbox">
     <input type="checkbox" id="checkbox" />
     <div class="switcher">
-      <i class="fa-solid fa-moon"></i>
+      <i class="theme-icon"></i>
     </div>
   </label>
 </div>
