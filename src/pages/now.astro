@@ -15,27 +15,39 @@ const allPostsMinusLatest = allPosts.slice(1);
 const { Content } = await latestNow.render();
 ---
 
+<style>
+  #previous-updates {
+    border-top: solid 1px var(--dark-text);
+  }
+
+  #now-explainer {
+    padding: 1rem 0;
+    border-bottom: solid 1px var(--dark-text);
+  }
+</style>
+
 <BaseLayout pageTitle={pageTitle}>
   <h1 class="page-title">{pageTitle}</h1>
-  <p class="italic-text">
+  <p class="italic-text" id="now-explainer">
     To replace the social media updates I keep this page inspired by <a
       href="http://sivers.org">Derek Sivers</a
     >
     and the <a href="https://nownownow.com/about">/now page movement</a>.
   </p>
   <Content />
-  <hr />
-  <h2>Previous updates</h2>
-  <ul>
-    {
-      allPostsMinusLatest.map((post) => (
-        <BlogPost
-          url={`/nows/${post.slug}/`}
-          title={post.data.title}
-          pubDate={post.data.pubDate}
-          tags={post.data.tags}
-        />
-      ))
-    }
-  </ul>
+  <div id="previous-updates">
+    <h2>Previous updates</h2>
+    <ul>
+      {
+        allPostsMinusLatest.map((post) => (
+          <BlogPost
+            url={`/nows/${post.slug}/`}
+            title={post.data.title}
+            pubDate={post.data.pubDate}
+            tags={post.data.tags}
+          />
+        ))
+      }
+    </ul>
+  </div>
 </BaseLayout>

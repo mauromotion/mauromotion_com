@@ -1,14 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import aboutImage from '../assets/images/about/me_in_the_mountains.png';
 const pageTitle = 'About me';
 ---
+
+<style>
+  .about-image {
+    margin-bottom: 3rem;
+  }
+</style>
 
 <BaseLayout pageTitle={pageTitle}>
   <section class="about-section">
     <h1 class="page-title">{pageTitle}</h1>
-    <img
-      src="@assets/images/about/me_in_the_mountains.png"
-      alt="a photo of me from behind while walking uphill on a mountain trail"
+    <Image
+      src={aboutImage}
+      alt="A photo of me from behind while walking uphill on a mountain trail"
+      class="about-image"
     />
     <p>
       My name is Mauro and I work as a motion designer, actually freelancing

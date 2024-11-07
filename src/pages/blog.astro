@@ -11,10 +11,16 @@ allPosts.sort(
 );
 ---
 
+<style>
+  #recent-posts-title {
+    border-bottom: 1px solid var(--dark-bg);
+    margin-bottom: 2rem;
+  }
+</style>
+
 <BaseLayout pageTitle={pageTitle}>
   <h1 class="page-title">{pageTitle}</h1>
-  <h2>Recent posts</h2>
-  <hr />
+  <h2 id="recent-posts-title">Recent posts</h2>
   <ul>
     {
       allPosts.map((post) => (

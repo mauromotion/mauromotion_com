@@ -30,7 +30,7 @@ const postsAmount = 4;
 
   #recent-posts {
     margin-bottom: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   #recent-posts a {
@@ -38,8 +38,8 @@ const postsAmount = 4;
   }
 
   #recent-posts-title {
-    border-bottom: 1px solid var(--dark-bg);
-    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-text);
+    margin-bottom: 2rem;
   }
 
   #all-posts {
@@ -48,14 +48,21 @@ const postsAmount = 4;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1rem;
-    background-color: var(--dark-bg);
-    color: var(--light-text);
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-alternate);
     text-decoration: none;
+  }
+
+  html[data-theme='dark'] #all-posts {
+    color: var(--color-text);
   }
 
   @media (max-width: 799px) {
     #welcome-title {
       font-size: 3rem;
+    }
+    #recent-posts {
+      font-size: 1.2rem;
     }
   }
 </style>

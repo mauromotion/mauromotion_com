@@ -1,3 +1,7 @@
+---
+
+---
+
 <style>
   nav {
     display: flex;
@@ -17,6 +21,16 @@
   nav a:hover {
     text-decoration: underline;
   }
+
+  #theme-switcher:hover {
+    color: var(--color-accent-cyan);
+  }
+
+  @media (max-width: 799px) {
+    nav {
+      gap: 1.5rem;
+    }
+  }
 </style>
 
 <nav>
@@ -25,6 +39,5 @@
   <a href="/about/">About</a>
   <!-- <a href="/uses/">Uses</a> -->
   <!-- <a href="/contact/">Contact</a> -->
-  <!-- <a href=`${Astro.site}feed.xml`>RSS</a> -->
-  <i class="fa-solid fa-moon"></i>
+  <a href=`${Astro.site}feed.xml`><i class="fa-solid fa-square-rss"></i></a>
 </nav>

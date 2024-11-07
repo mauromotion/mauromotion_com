@@ -4,24 +4,27 @@ const { frontmatter } = Astro.props;
 ---
 
 <style>
-  .tags {
-    display: flex;
-    margin: 1rem 0 1rem 0;
-    gap: .5rem;
-  }
-
-  .tag {
-    text-transform: uppercase;
-    font-size: .85rem;
-    font-weight: 700;
-    background-color: var(--darker-bg-color);
-    border-radius: 4px;
-    padding: .2rem .5rem .2rem .5rem;
-  }
-
   .post-title {
-    padding: 0rem 2rem 0.5rem 2rem;
-    border-radius: 6px;
+    font-size: 2rem;
+  }
+
+  .post-date {
+    font-style: italic;
+    font-size: 1.1rem;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  @media (max-width: 799px) {
+    .post-title {
+      font-size: 1.3rem;
+    }
   }
 </style>
 
@@ -29,13 +32,15 @@ const { frontmatter } = Astro.props;
   <div class="post-title">
     <h1>{frontmatter.title}</h1>
   </div>
-  <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
+  <div class="post-meta">
+  <p class="post-date">{frontmatter.pubDate.toString().slice(0, 10)}</p>
+  <!-- <p><em>{frontmatter.description}</em></p> -->
 
   <div class="tags">
     {frontmatter.tags.map((tag) => (
     <p class="tag"><a href=`/tags/${tag}`>{tag}</a></p>
       ))}
+  </div>
   </div>
   <slot />
 </BaseLayout>

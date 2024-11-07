@@ -34,18 +34,18 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle} - mauromotion.com</title>
   </head>
   <body>
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
-    <a
-      rel="me"
-      class="visually-hidden"
-      aria-hidden="true"
-      href="https://mograph.social/@mauro">Mastodon verification link</a
-    >
-    <!-- FIXME: this is an horrid hack -->
-    <div aria-hidden="true" id="filler"><p></p></div>
+    <div class="wrapper">
+      <Header />
+      <main>
+        <slot />
+      </main>
+      <Footer />
+      <a
+        rel="me"
+        class="visually-hidden"
+        aria-hidden="true"
+        href="https://mograph.social/@mauro">Mastodon verification link</a
+      >
+    </div>
   </body>
 </html>

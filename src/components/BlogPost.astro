@@ -17,18 +17,12 @@ const truncatedTitle = truncateText(title, maxTitleLength);
 
 <style>
   li {
-    /* width: max-content; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    padding: .5rem 0;
-    border-bottom: 1px dashed var(--main-text-color);
-  }
-  li:hover {
-
-    border-bottom: 1px solid var(--main-text-color);
+    margin-bottom: 2rem;
   }
 
   .post-date {
@@ -36,26 +30,6 @@ const truncatedTitle = truncateText(title, maxTitleLength);
     font-weight: bold;
   }
 
-  .tags {
-    display: flex;
-    gap: 0.3rem;
-  }
-  .tags a {
-    font-family: 'Inter', sans-serif;
-    font-size: small;
-    text-transform: uppercase;
-    background-color: var(--accent-lightorange);
-    border-radius: 5px;
-    padding: 0.25rem 0.5rem;
-    text-decoration: none;
-
-  }
-
-  .tags a:hover {
-    background-color: var(--accent-cyan);
-    color: var(--dark-text);
-    text-decoration: none;
-  }
 
 </style>
 

@@ -33,4 +33,4 @@ But if you look closer, if you are curious and brave enough, you will notice how
 
 ![a view of Canary Wharf, tall glass building around a quiet canal](../../assets/images/posts/2024-05-26-sunday-morning-ramblings/canary_wharf_photo_2024-05-26_12-49-52.jpg)
 
-<figcaption>A view of Canary Wharf</figcaption>
+<figcaption>A view of Canary Wharf.</figcaption>

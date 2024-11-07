@@ -4,58 +4,76 @@
 
 <style>
   footer {
-    background-color: var(--dark-bg);
-    color: var(--light-text);
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-alternate);
     display: grid;
     grid-template-columns: 0.5fr 2fr 0.5fr;
-    /* flex-wrap: wrap; */
-    font-size: 16px;
-    padding: 40px 20px;
-    position:relative;
+    font-size: 1rem;
     width: max-width;
-    gap: 0.5rem;
-    margin-block-start: 4rem;
-    padding-block: 4rem;
-    padding: 5rem;
-    margin-top: 10rem;
+    margin-top: 5rem;
+    transition: margin-top 0.3s ease;
+  }
+
+  html[data-theme='dark'] footer {
+    color: var(--color-text)
   }
 
 .footer-column {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .footer-content {
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* gap: 0.5rem; */
 }
 
   #footer-links {
     display: flex;
     font-size:larger;
     gap: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   footer a {
-    color: var(--light-text);
     font-weight: bold;
   }
+
+  html[data-theme='light'] footer a {
+    color: var(--color-text-alternate)
+  } 
+
+  footer a:hover {
+    color: var(--color-accent-orange);
+  }
+
+  #astro-logo {
+    width: 2rem;
+  }
+
 @media (max-width: 768px) {
   footer {
     flex-direction: column;
     align-items: center;
+    grid-template-columns: 0.25fr 2.5fr 0.25fr;
   }
+
+
 </style>
 
 <footer>
   <div class="footer-column"></div>
   <div class="footer-column footer-content">
-    <div id="footer-links"><a href="/uses/">Uses</a><a href="/contact/">Contact</a><a href="`${Astro.site}feed.xml`">RSS</a></div>
-  <span>© 2024 Mauro Di Ianni.</span><span>All articles under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Commons CC BY-NC-SA 4.0</a> license.</span> <span>Made with Astro and elbow grease.</span>
+    <div id="footer-links"><a href="/uses/">Uses</a><a href="/contact/">Contact</a><a href="`${Astro.site}feed.xml`">RSS</a>
+    </div>
+    <span>© 2024 Mauro Di Ianni.</span>
+    <span>All articles under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Commons CC BY-NC-SA 4.0</a> license.</span> 
+    <span>Made with Astro <img id="astro-logo" src="/astro-icon-light.svg" alt="small logo of the Astro web framework"> and elbow grease.</span>
   </div>
-
   <div class="footer-column"></div>
 </footer>
