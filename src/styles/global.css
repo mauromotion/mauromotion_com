@@ -97,7 +97,7 @@ ol {
 }
 
 a {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: var(--dark-text);
 }
 
@@ -166,6 +166,11 @@ figcaption {
 /* the styles are inside the individual relevant components' files */
 
 /* UTILITY */
+
+.italic-text {
+  font-style: italic;
+}
+
 .visually-hidden {
   display: none;
 }
