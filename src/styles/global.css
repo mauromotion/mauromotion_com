@@ -58,6 +58,15 @@ main {
   margin-bottom: 5rem;
 }
 
+@media (max-width: 799px) {
+  body {
+    font-size: 1.2rem;
+  }
+  main {
+    width: min(85ch, 100% - 4rem);
+  }
+}
+
 h1,
 h2,
 h3,
@@ -161,6 +170,12 @@ figcaption {
 
 .page-title {
   font-size: 5rem;
+}
+
+@media (max-width: 799px) {
+  .page-title {
+    font-size: 3rem;
+  }
 }
 
 /* the styles are inside the individual relevant components' files */

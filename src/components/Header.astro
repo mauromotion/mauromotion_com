@@ -33,6 +33,15 @@ import Navigation from './Navigation.astro';
   #logo-image {
     width: 2rem;
   }
+  @media (max-width: 799px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+    #logo-text {
+      font-size: 1.8rem;
+    }
+  }
 </style>
 
 <header>

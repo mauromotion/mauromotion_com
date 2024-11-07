@@ -6,10 +6,9 @@
   footer {
     background-color: var(--dark-bg);
     color: var(--light-text);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items:baseline;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    /* flex-wrap: wrap; */
     font-size: 16px;
     padding: 40px 20px;
     position:relative;
@@ -17,13 +16,29 @@
     gap: 0.5rem;
     margin-block-start: 4rem;
     padding-block: 4rem;
+    padding: 5rem;
     margin-top: 10rem;
   }
+
+.footer-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+}
+
   #footer-links {
     display: flex;
     font-size:larger;
-    gap: 1rem;
+    gap: 2rem;
+    margin-bottom: 1rem;
   }
+
   footer a {
     color: var(--light-text);
     font-weight: bold;
@@ -36,6 +51,11 @@
 </style>
 
 <footer>
-  <div id="footer-links"><a href="/uses/">Uses</a><a href="/contact/">Contact</a><a href="`${Astro.site}feed.xml`">RSS</a></div>
-  <span>© 2024 Mauro Di Ianni </span><span> • all articles under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Commons CC BY-NC-SA 4.0</a> license </span> <span> • made with Astro and elbow grease.</span>
+  <div class="footer-column"></div>
+  <div class="footer-column footer-content">
+    <div id="footer-links"><a href="/uses/">Uses</a><a href="/contact/">Contact</a><a href="`${Astro.site}feed.xml`">RSS</a></div>
+  <span>© 2024 Mauro Di Ianni.</span><span>All articles under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Commons CC BY-NC-SA 4.0</a> license.</span> <span>Made with Astro and elbow grease.</span>
+  </div>
+
+  <div class="footer-column"></div>
 </footer>
