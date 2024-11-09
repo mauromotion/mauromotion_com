@@ -1,7 +1,6 @@
 ---
 import Navigation from './Navigation.astro';
 import Logo from './Logo.astro';
-import Toggle from './Toggle.astro';
 ---
 
 <style>
@@ -32,14 +31,14 @@ import Toggle from './Toggle.astro';
     height: auto;
   }
 
-  :global(#theme-toggle) {
-    cursor: pointer;
-    margin-bottom: 1rem;
-  }
+  /* :global(#theme-toggle) { */
+  /*   cursor: pointer; */
+  /*   margin-bottom: 1rem; */
+  /* } */
 
   @media (max-width: 799px) {
     header {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
     }
 
@@ -51,13 +50,13 @@ import Toggle from './Toggle.astro';
       width: 1.5rem;
       height: auto;
     }
-    :global(#theme-toggle) {
-      position: absolute;
-      top: 2.3rem;
-      right: 1rem;
-      cursor: pointer;
-      margin: 1rem;
-    }
+    /* :global(#theme-toggle) { */
+    /*   position: absolute; */
+    /*   top: 2.3rem; */
+    /*   right: 1rem; */
+    /*   cursor: pointer; */
+    /*   margin: 1rem; */
+    /* } */
   }
 </style>
 <header>
@@ -68,5 +67,4 @@ import Toggle from './Toggle.astro';
     <Logo className="logo-image" />
   </div>
   <Navigation />
-  <Toggle id="theme-toggle" />
 </header>

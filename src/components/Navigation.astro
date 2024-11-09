@@ -1,5 +1,6 @@
 ---
-
+import Toggle from './Toggle.astro';
+import ThemeSelect from '../components/ThemeSelect.astro';
 ---
 
 <style>
@@ -26,10 +27,20 @@
     color: var(--color-accent-cyan);
   }
 
+  :global(#theme-toggle) {
+    cursor: pointer;
+    /* margin-bottom: 0.2rem; */
+    margin-top: 0.5rem;
+    margin-left: 8rem;
+  }
   @media (max-width: 799px) {
     nav {
       gap: 1.5rem;
+      margin-top: 2rem;
     }
+
+  :global(#theme-toggle) {
+    margin-left: 0;
   }
 </style>
 
@@ -40,4 +51,6 @@
   <!-- <a href="/uses/">Uses</a> -->
   <!-- <a href="/contact/">Contact</a> -->
   <a href=`${Astro.site}feed.xml`><i class="fa-solid fa-square-rss"></i></a>
+  <!-- <Toggle id="theme-toggle" /> -->
+  <ThemeSelect id="theme-toggle"/>
 </nav>

@@ -12,44 +12,6 @@
 }
 
 /* BASE STYLES */
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-background: #efe8e3;
-    --color-background-secondary: #242424;
-    --color-text: #242424;
-    --color-text-alternate: #efe8e3;
-    --color-accent-orange: #e66937;
-    --color-accent-lightorange: #f0b979;
-    --color-accent-cyan: #9dceca;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #242424;
-    --color-background-secondary: #2d2c2b;
-    --color-text: #efe8e3;
-    --color-text-alternate: #242424;
-    --color-accent-orange: #e66937;
-    --color-accent-lightorange: #f0b979;
-    --color-accent-cyan: #9dceca;
-  }
-}
-
-[data-theme='light'] {
-  --color-text: #242424;
-  --color-text-alternate: #efe8e3;
-  --color-background: #efe8e3;
-  --color-background-secondary: #242424;
-}
-
-[data-theme='dark'] {
-  --color-text: #efe8e3;
-  --color-text-alternate: #242424;
-  --color-background: #242424;
-  --color-background-secondary: #2d2c2b;
-}
-
 html {
   hanging-punctuation: first last;
   /* color-scheme: dark light; */

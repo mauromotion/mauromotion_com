@@ -2,12 +2,14 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ThemeManager from '../components/ThemeManager.astro';
 const { pageTitle } = Astro.props;
 ---
 
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
+    <ThemeManager />
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link
       href="https://fonts.bunny.net/css?family=cambo:400|inter:400,800"
@@ -34,6 +36,32 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle} - mauromotion.com</title>
   </head>
   <body>
+    <style is:global>
+      :root,
+      :root[data-theme='light'] {
+        --color-background: #efe8e3;
+        --color-background-secondary: #242424;
+        --color-text: #242424;
+        --color-text-alternate: #efe8e3;
+        --color-accent-orange: #e66937;
+        --color-accent-lightorange: #f0b979;
+        --color-accent-cyan: #9dceca;
+        color-scheme: light;
+      }
+
+      @media (prefers-color-scheme: dark), :root[data-theme='dark'] {
+        :root {
+          --color-background: #242424;
+          --color-background-secondary: #2d2c2b;
+          --color-text: #efe8e3;
+          --color-text-alternate: #242424;
+          --color-accent-orange: #e66937;
+          --color-accent-lightorange: #f0b979;
+          --color-accent-cyan: #9dceca;
+          color-scheme: dark;
+        }
+      }
+    </style>
     <div class="wrapper">
       <Header />
       <main>
