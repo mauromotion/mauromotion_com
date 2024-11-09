@@ -184,10 +184,10 @@ footer {
   font-size: small;
   text-transform: uppercase;
   background-color: var(--color-accent-lightorange);
-  /* border-radius: 5px; */
+  border-radius: 5px;
   padding: 0.25rem 0.5rem;
   text-decoration: none;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   color: var(--color-text);
 }
 
