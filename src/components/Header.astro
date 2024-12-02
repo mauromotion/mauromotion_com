@@ -21,42 +21,46 @@ import Logo from './Logo.astro';
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
+    padding: 0;
   }
   #logo-text {
     font-size: 2.5rem;
   }
 
   .logo-image {
-    width: 2rem;
-    height: auto;
+    display: flex; /* Ensure the SVG aligns properly inside */
+    align-items: center; /* Align vertically */
+    width: 2rem; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
   }
 
-  /* :global(#theme-toggle) { */
-  /*   cursor: pointer; */
-  /*   margin-bottom: 1rem; */
-  /* } */
+  .logo-image svg {
+    width: 100%; /* SVG fills the wrapper */
+    height: auto;
+    display: block; /* Avoid inline SVG quirks */
+  }
 
   @media (max-width: 799px) {
     header {
       flex-direction: column-reverse;
       align-items: center;
+      justify-content: center;
+    }
+
+    #logotype {
+      text-align: center;
     }
 
     #logo-text {
       font-size: 1.8rem;
+      padding-top: 0;
+      margin-top: 1rem;
     }
 
     .logo-image {
       width: 1.5rem;
       height: auto;
     }
-    /* :global(#theme-toggle) { */
-    /*   position: absolute; */
-    /*   top: 2.3rem; */
-    /*   right: 1rem; */
-    /*   cursor: pointer; */
-    /*   margin: 1rem; */
-    /* } */
   }
 </style>
 <header>
@@ -64,7 +68,9 @@ import Logo from './Logo.astro';
     <h2 id="logo-text">
       <a href="/">Mauromotion</a>
     </h2>
-    <Logo className="logo-image" />
+    <div class="logo-image">
+      <Logo />
+    </div>
   </div>
   <Navigation />
 </header>

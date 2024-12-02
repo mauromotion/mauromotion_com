@@ -6,8 +6,7 @@ import ThemeSelect from '../components/ThemeSelect.astro';
 <style>
   nav {
     display: flex;
-    /* flex-wrap: wrap; */
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     margin: 0;
     padding: 0.5rem;
@@ -23,16 +22,6 @@ import ThemeSelect from '../components/ThemeSelect.astro';
     text-decoration: underline;
   }
 
-  #theme-switcher:hover {
-    color: var(--color-accent-cyan);
-  }
-
-  :global(#theme-toggle) {
-    cursor: pointer;
-    /* margin-bottom: 0.2rem; */
-    margin-top: 0.5rem;
-    margin-left: 8rem;
-  }
   @media (max-width: 799px) {
     nav {
       gap: 1.5rem;
@@ -51,6 +40,5 @@ import ThemeSelect from '../components/ThemeSelect.astro';
   <!-- <a href="/uses/">Uses</a> -->
   <!-- <a href="/contact/">Contact</a> -->
   <a href=`${Astro.site}feed.xml`><i class="fa-solid fa-square-rss"></i></a>
-  <!-- <Toggle id="theme-toggle" /> -->
   <ThemeSelect id="theme-toggle"/>
 </nav>

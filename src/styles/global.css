@@ -118,7 +118,6 @@ a:not([class]) {
 
 img,
 picture,
-svg,
 video {
   font-style: italic;
   max-width: 100%;
