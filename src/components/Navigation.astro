@@ -22,15 +22,16 @@ import ThemeSelect from '../components/ThemeSelect.astro';
     text-decoration: underline;
   }
 
+  #theme-toggle {
+    margin-top: 1rem;
+  }
+
   @media (max-width: 799px) {
     nav {
       gap: 1.5rem;
       margin-top: 2rem;
     }
 
-  :global(#theme-toggle) {
-    margin-left: 0;
-  }
 </style>
 
 <nav>
@@ -40,5 +41,7 @@ import ThemeSelect from '../components/ThemeSelect.astro';
   <!-- <a href="/uses/">Uses</a> -->
   <!-- <a href="/contact/">Contact</a> -->
   <a href=`${Astro.site}feed.xml`><i class="fa-solid fa-square-rss"></i></a>
-  <ThemeSelect id="theme-toggle"/>
+  <div id="theme-toggle">
+    <ThemeSelect />
+  </div>
 </nav>
