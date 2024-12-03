@@ -20,6 +20,10 @@ const { Content } = await latestNow.render();
     border-top: solid 1px var(--dark-text);
   }
 
+  #previous-updates-title {
+    margin-bottom: 2rem;
+  }
+
   #now-explainer {
     padding: 1rem 0;
     border-bottom: solid 1px var(--dark-text);
@@ -36,7 +40,7 @@ const { Content } = await latestNow.render();
   </p>
   <Content />
   <div id="previous-updates">
-    <h2>Previous updates</h2>
+    <h2 id="previous-updates-title">Previous updates</h2>
     <ul>
       {
         allPostsMinusLatest.map((post) => (
@@ -45,6 +49,7 @@ const { Content } = await latestNow.render();
             title={post.data.title}
             pubDate={post.data.pubDate}
             tags={post.data.tags}
+            showTags={false}
           />
         ))
       }

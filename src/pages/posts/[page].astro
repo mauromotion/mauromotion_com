@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPost from '../../components/BlogPost.astro';
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await getCollection('posts');
+  const orderedPosts = allPosts.sort(
+    (a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate),
+  );
+
+  return paginate(orderedPosts, { pageSize: 10 });
+}
+
+const { page } = Astro.props;
+
+const pageTitle = `Blog - Page ${page.currentPage}`;
+---
+
+<style>
+  #recent-posts-title {
+    border-bottom: 1px solid var(--dark-bg);
+    margin-bottom: 2rem;
+  }
+  ul {
+    margin-bottom: 4rem;
+  }
+  .navigation-button {
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: var(--color-background-secondary);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 5px;
+  }
+</style>
+
+<BaseLayout pageTitle={pageTitle}>
+  <h1 class="page-title">Blog</h1>
+  <h2 id="recent-posts-title">Recent posts</h2>
+  <ul>
+    {
+      page.data.map((post) => (
+        <BlogPost
+          url={`/posts/${post.slug}/`}
+          title={post.data.title}
+          pubDate={post.data.pubDate}
+          tags={post.data.tags}
+        />
+      ))
+    }
+  </ul>
+  <nav>
+    {
+      page.currentPage > 1 && (
+        <a class="navigation-button" href={`/posts/${page.currentPage - 1}`}>
+          Previous
+        </a>
+      )
+    }
+    {
+      page.currentPage < page.lastPage && (
+        <a class="navigation-button" href={`/posts/${page.currentPage + 1}`}>
+          Next
+        </a>
+      )
+    }
+  </nav>
+</BaseLayout>

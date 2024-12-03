@@ -1,5 +1,5 @@
 ---
-const { url, title, pubDate, description, tags } = Astro.props;
+const { url, title, pubDate, description, tags, showTags = true } = Astro.props;
 const options = { day: 'numeric', month: 'short', year: 'numeric' };
 const formattedDate = pubDate.toLocaleDateString('en-GB', options);
 
@@ -36,9 +36,11 @@ const truncatedTitle = truncateText(title, maxTitleLength);
 <li>
   <p class="post-date">{formattedDate}</p>
   <a href={url}>{truncatedTitle}</a>
+  {showTags && tags.length > 0 && (
   <div class="tags">
     {tags.map((tag) => (
     <p><a href=`/tags/${tag}`>{tag}</a></p>
       ))}
   </div>
+  )}
 </li>

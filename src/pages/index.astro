@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
+import AllPostsButton from '../components/AllPostsButton.astro';
 const allPosts = await getCollection('posts');
 const pageTitle = 'Home';
 
@@ -42,18 +43,6 @@ const postsAmount = 4;
     margin-bottom: 2rem;
   }
 
-  #all-posts {
-    padding: 1rem 1.5rem;
-    margin-top: 4rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1rem;
-    background-color: var(--color-background-secondary);
-    color: var(--color-text-alternate);
-    text-decoration: none;
-    border-radius: 5px;
-  }
-
   html[data-theme='dark'] #all-posts {
     color: var(--color-text);
   }
@@ -76,7 +65,7 @@ const postsAmount = 4;
       currently working my way into web development. Small web advocate, Linux
       enthusiast, music and art lover. <br /><br /> See what I'm doing
       <a href="/now/">Now</a> or read my latest ramblings on the <a
-        href="/blog/">Blog</a
+        href="/posts/1/">Blog</a
       >.
     </p>
   </section>
@@ -97,5 +86,5 @@ const postsAmount = 4;
       }
     </ul>
   </section>
-  <a id="all-posts" href="/blog/">View all posts</a>
+  <AllPostsButton />
 </BaseLayout>
