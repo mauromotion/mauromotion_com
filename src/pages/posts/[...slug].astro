@@ -1,19 +1,40 @@
 ---
 import { getCollection } from 'astro:content';
 import MarkdownPostLayout from '../../layouts/MarkDownPostLayout.astro';
+import PrevNext from '../../components/PrevNext.astro';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('posts');
-  return blogEntries.map((entry) => ({
+
+  blogEntries.sort(
+    (a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate),
+  );
+
+  const numberOfPosts = blogEntries.length;
+
+  return blogEntries.map((entry, i) => ({
     params: { slug: entry.slug },
-    props: { entry },
+    props: {
+      entry,
+      prevPost:
+        i + 1 === numberOfPosts // If the current post is the oldest
+          ? { frontmatter: '' }
+          : blogEntries[i + 1],
+      // Next post
+      nextPost:
+        i === 0 // If the current post is the newest
+          ? { frontmatter: '' }
+          : blogEntries[i - 1],
+    },
   }));
 }
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const { prevPost, nextPost } = Astro.props;
 ---
 
 <MarkdownPostLayout frontmatter={entry.data}>
   <Content />
+  <PrevNext {prevPost} {nextPost} />
 </MarkdownPostLayout>
