@@ -4,9 +4,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = 'Contact';
 ---
 
+<style>
+  .page-title {
+    margin-bottom: 2rem;
+  }
+</style>
+
 <BaseLayout pageTitle={pageTitle}>
   <main>
     <h1 class="page-title">{pageTitle}</h1>
-    <p>Email me at: <a href="#">hello@mauromotion.com</a></p>
+    <p>
+      Email me at: <a href="mailto:hello@mauromotion.com" <a
+        >hello@mauromotion.com</a
+      >
+      <p>Reach me on <a href="https://mograph.social/@mauro">Mastodon</a></p>
+    </p>
   </main>
 </BaseLayout>
