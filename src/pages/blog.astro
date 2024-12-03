@@ -7,7 +7,8 @@ const pageTitle = 'Blog';
 
 // Sort posts in reverse chronological order
 allPosts.sort(
-  (a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate),
+  (a, b) =>
+    Date.parse(String(b.data.pubDate)) - Date.parse(String(a.data.pubDate)),
 );
 ---
 

@@ -1,11 +1,11 @@
 ---
-const { url, title, pubDate, description, tags, showTags = true } = Astro.props;
+const { url, title, pubDate, tags, showTags = true } = Astro.props;
 const options = { day: 'numeric', month: 'short', year: 'numeric' };
 const formattedDate = pubDate.toLocaleDateString('en-GB', options);
 
 const maxTitleLength = 50; // Adjust the max length as needed
 
-function truncateText(text, maxLength) {
+function truncateText(text: string, maxLength: number) {
   if (text.length > maxLength) {
     return text.slice(0, maxLength) + '...';
   }
@@ -38,7 +38,7 @@ const truncatedTitle = truncateText(title, maxTitleLength);
   <a href={url}>{truncatedTitle}</a>
   {showTags && tags.length > 0 && (
   <div class="tags">
-    {tags.map((tag) => (
+    {tags.map((tag: string) => (
     <p><a href=`/tags/${tag}`>{tag}</a></p>
       ))}
   </div>
