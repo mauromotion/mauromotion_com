@@ -93,7 +93,7 @@ label {
 /* ol[role='list'] { */
 ul,
 ol {
-  list-style: square;
+  list-style: inside;
   /* list-style-position: inside; */
   /* padding-left: 1em; */
   /* text-indent: -0.5em; */
