@@ -3,6 +3,8 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogPost from '../../components/BlogPost.astro';
 
+import type { GetStaticPaths } from 'astro';
+
 interface Post {
   data: {
     title: string;
@@ -14,20 +16,24 @@ interface Post {
 interface Pagination {
   currentPage: number;
   lastPage: number;
-  data: Post[]; // You can replace `any` with the specific type for your posts
+  data: Post[];
 }
 
-export async function getStaticPaths({ paginate }) {
+interface Props {
+  page: Pagination;
+}
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
   const allPosts = await getCollection('posts');
   const orderedPosts = allPosts.sort(
-    (a, b) =>
-      Date.parse(String(b.data.pubDate)) - Date.parse(String(a.data.pubDate)),
+    (a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate),
   );
 
   return paginate(orderedPosts, { pageSize: 10 });
-}
+};
 
-const { page }: { page: Pagination } = Astro.props;
+// const { page }: { page: Pagination } = Astro.props;
+const { page } = Astro.props as Props;
 
 const pageTitle = `Blog - Page ${page.currentPage}`;
 ---
