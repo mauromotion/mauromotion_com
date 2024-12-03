@@ -54,8 +54,7 @@ const { defaultTheme = 'auto' } = Astro.props;
     return { setTheme, getTheme, getSystemTheme, getDefaultTheme };
   })();
   theme.setTheme(theme.getTheme());
-</script>
-<script>
+
   document.addEventListener('astro:after-swap', () =>
     window.theme.setTheme(window.theme.getTheme()),
   );
