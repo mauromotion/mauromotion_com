@@ -37,7 +37,7 @@
     display: flex;
     font-size:larger;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   footer a {
@@ -79,16 +79,16 @@
   <footer>
   <div class="footer-column"></div>
   <div class="footer-column footer-content">
+    <div id="footer-links">
+      <a href="/uses/">Uses</a><a href="/contact/">Contact</a><a href=`${Astro.site}feed.xml`>RSS</a>
+      <a href="https://mograph.social/@mauro"><i class="fa-brands fa-mastodon"></i></a>
+    </div>
     <div id="fediring">
       <p>
           <a href="https://fediring.net/previous?host=mauromotion.com">⟸ </a>
           <a href="https://fediring.net/">Fediring</a>
           <a href="https://fediring.net/next?host=mauromotion.com"> ⟹</a>
       </p>
-    </div>
-    <div id="footer-links">
-      <a href="/uses/">Uses</a><a href="/contact/">Contact</a><a href=`${Astro.site}feed.xml`>RSS</a>
-      <a href="https://mograph.social/@mauro"><i class="fa-brands fa-mastodon"></i></a>
     </div>
     <span>© 2024 Mauro Di Ianni.</span>
     <span>All articles under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Commons CC BY-NC-SA 4.0</a> license.</span> 
