@@ -48,7 +48,7 @@ Just a shiny tool that works as a server monitoring. I use htop most of the time
 
 The apps that didn't make it to the great docker purge were two read-it-later apps. Mostly because after using Linkding I realiesed I don't really need a read-it-later app at all. I can just save the bookmark and then maybe use Firefox or Safari built in readers if I fancy a cleaner layout to read a long article.
 
-So Wallabag spinned for a bit on my server but it also felt very clunky and old, in many UI/UX ways. I briefly tried Readerdeck as well, which is an upcoming alternative to Wallabag, and while feeling better than Wallabag in many fronts, it still felt *undercooked*.
+So [Wallabag](https://wallabag.org/) spinned for a bit on my server but it also felt very clunky and old, in many UI/UX ways. I briefly tried [Readeck](https://readeck.org/en/) as well, which is an upcoming alternative to Wallabag, and while feeling better than Wallabag in many fronts, it still felt *undercooked*.
 
 ## To expose or not to expose? VPN is the answer!
 
