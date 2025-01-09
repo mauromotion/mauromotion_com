@@ -29,7 +29,6 @@ article {
 
 body {
   min-height: 100svh;
-  font-size: 1.125rem;
   line-height: 1.5;
   font-family: 'Inter', Arial, sans-serif;
   font-size: 1.3rem;
@@ -52,8 +51,9 @@ main {
 }
 
 @media (max-width: 799px) {
-  main p {
+  body {
     font-size: 1.05rem;
+    hyphens: none;
   }
   main {
     width: min(85ch, 100% - 4rem);
@@ -93,7 +93,7 @@ label {
 /* ol[role='list'] { */
 ul,
 ol {
-  list-style: inside;
+  /* list-style: inside; */
   /* list-style-position: inside; */
   /* padding-left: 1em; */
   /* text-indent: -0.5em; */
