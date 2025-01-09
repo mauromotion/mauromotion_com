@@ -6,18 +6,18 @@ const pageTitle = 'About me';
 ---
 
 <style>
-  .about-image {
+  #about-image {
     margin-bottom: 3rem;
   }
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
-  <section class="about-section">
+  <section id="about-section">
     <h1 class="page-title">{pageTitle}</h1>
     <Image
       src={aboutImage}
       alt="A photo of me from behind while walking uphill on a mountain trail"
-      class="about-image"
+      id="about-image"
     />
     <p>
       My name is Mauro and I'm an Italian citizen living in London, UK. I used

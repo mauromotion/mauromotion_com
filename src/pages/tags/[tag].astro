@@ -6,6 +6,12 @@ import AllPostsButton from '../../components/AllPostsButton.astro';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');
+  // Sort posts in reverse chronological order
+  allPosts.sort(
+    (a, b) =>
+      Date.parse(String(b.data.pubDate)) - Date.parse(String(a.data.pubDate)),
+  );
+
   const uniqueTags = [
     ...new Set(allPosts.map((post) => post.data.tags).flat()),
   ];

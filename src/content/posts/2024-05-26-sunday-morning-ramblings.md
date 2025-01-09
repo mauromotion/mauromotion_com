@@ -1,7 +1,7 @@
 ---
 title: 'Sunday morning ramblings - London, Canary Wharf, the IndieWeb'
 pubDate: 2024-05-26
-tags: ['travelling', 'indieWeb']
+tags: ['travelling', 'indieweb']
 description: 'testing the desc'
 ---
 
