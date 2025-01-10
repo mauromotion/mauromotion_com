@@ -56,7 +56,7 @@ main {
     hyphens: none;
   }
   main {
-    width: min(85ch, 100% - 4rem);
+    width: min(55ch, 100% - 2rem);
   }
 }
 
@@ -93,14 +93,12 @@ label {
 /* ol[role='list'] { */
 ul,
 ol {
-  /* list-style: inside; */
-  /* list-style-position: inside; */
+  list-style-position: inside;
   /* padding-left: 1em; */
   /* text-indent: -0.5em; */
 }
 
 a {
-  /* text-decoration: none; */
   color: var(--color-text);
 }
 
@@ -113,7 +111,6 @@ a:hover {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
-  /* color: currentColor; */
 }
 
 img,
@@ -123,8 +120,6 @@ video {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
   shape-margin: 1rem;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
