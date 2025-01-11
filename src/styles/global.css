@@ -94,7 +94,7 @@ label {
 ul,
 ol {
   list-style-position: inside;
-  /* padding-left: 1em; */
+  /* padding-left: 0.5em; */
   /* text-indent: -0.5em; */
 }
 
@@ -163,7 +163,7 @@ footer {
 }
 .page-explainer {
   border-bottom: solid 1px var(--color-text);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.7rem;
 }
 
 @media (max-width: 799px) {
