@@ -18,17 +18,11 @@ Another interesting week on the Cybernetic WEB™ of our futuristic age!
 - [Olof Dreijer - Coral](https://olofdreijer.bandcamp.com/album/coral)
 - [Milkweed - Folklore 1979](https://milkweedfolk.bandcamp.com/album/folklore-1979-2)
 
-<!-- ## Visual 🖼️ -->
-
 ## Long Reads 📰
 
 - [Secularization Comes for the Religion of Technology: Or, how to make sense of techno-optimist manifestos, the Open Ai/Altman affair, EA/e-acc movements, and the general sense of cultural stagnation](https://theconvivialsociety.substack.com/p/secularization-comes-for-the-religion) _// Brilliant essay about technology as religion_
 - [The growing popularity of degrowth](https://grist.org/looking-forward/the-growing-popularity-of-degrowth/) _// Dear capitalism, go small or go home._
 - [Why we must seize leisurely interludes from work’s confines](https://aeon.co/essays/why-we-must-seize-leisurely-interludes-from-works-confines) _// I could ask an AI assistant to give me a snappy oneliner to describe this article, the truth is I still have to read it myself, but it looks interesting._
-
-<!-- ## Self-growth 🌱 -->
-
-<!-- ## Gaming 🕹️ -->
 
 ## IndieWeb 🏴‍☠️
 
