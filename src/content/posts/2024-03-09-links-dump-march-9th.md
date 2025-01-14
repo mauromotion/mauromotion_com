@@ -6,7 +6,7 @@ description: ''
 ---
 
 Another interesting week on the Cybernetic WEB™ of our futuristic age!
-<br>_(Writing this for posterity, so they'll think we were living the Sci-fi dream. Alas.)._
+_(Writing this for posterity, so they'll think we were living the Sci-fi dream. Alas.)._
 
 ## Music 🎵
 

@@ -12,14 +12,12 @@ In recent years I've been trying many different solutions for my note taking nee
 - Logseq is an Electron app and it's becoming quite slow.
 - There are still occasions where I lose some data (although, I sync my graph in a git repository so I'm safe 99% of the time).
 - They're taking a long time to implement some quality of life features (like being able to use checkboxes properly, for example).
-  <br>
-  <br>
+
   I'll most surely keep using Logseq, but I feel the need of something a bit less cumbersome for some of my note taking needs.
-  <br>
-  <br>
+
   In particular, since I started my coding journey, I spend a lot of time in my terminal and text editor, which is Neovim.
   After learning the vim motions I started to use them everywhere and I really miss them when writing notes. And so I decided to give a shot at [ViwmWiki](https://github.com/vimwiki/vimwiki), which is a note taking plugin for Vim/Neovim that creates local text files and an interlinked structure of notes, with some nice features.
-  <br>
+
   The process of installing and configuring VimWiki properly in my Neovim set up though, wasn't always straightforward, and so I'm gonna document some solutions and workarounds here, for future reference.
 
 ## Translating the Vimscript commands into Lua
@@ -105,9 +103,8 @@ After figuring out the init section of lazy.nvim the previous workaround is mean
 ### A pesky code snippet
 
 ~~Most important of all, I had to find where exactly to put this code in my Neovim config, because for some VimWiki quirks already not completely clear to me, it won't work at all if I put them in my `settings.lua` file, as I'd like to.
-<br>
+
 As of now, my modular Neovim configuration works like this:~~
-<br>
 
 ```
 init.lua----
@@ -130,7 +127,6 @@ plugins.lua
     utilities/
 ```
 
-<br>
 ~~I had to put the VimWiki config files right after calling LazyVim to load my plugins, in the `init.lua` file that loads all the plugins modules, otherwise Neovim won't read it at all.~~
 
 ## Markdown it all
@@ -187,10 +183,9 @@ The only things I had to fix were a table and some backslashes around some files
 
 I use tags in my other systems quite extensively and I like to have a tag "system" in VimWiki as well. Too bad it's quite limited for now. Tags are added by surrounding a word with semicolons `:work:`, and can be chained together, if multiple: `:work:programming:python:`.
 The major issue though is the search system: it's just bad, and slow.
-<br>
-<br>
+
 What I ended up doing is using [Telescope](https://github.com/nvim-telescope/telescope.nvim), which I have already installed in Neovim, with fzf and ripgrep for some sweet extra speed.
-<br>
+
 And then I found this [plugin](https://github.com/ElPiloto/telescope-vimwiki.nvim) for Telescope on GitHub, which makes for an even better integration, so I can use specific keybindings to search directly only inside my VimWiki notes, either just for notes' titles or live grep all the notes' content, no matter the CWD. Alas, it looks like the development of the plugin is not active anymore but I wish they'd implement tags as well!
 
 ## Shortcuts and commands
@@ -213,5 +208,4 @@ Here's a table of shortcuts for VimWiki commands and a few more to deal with the
 | "n", z=                 | Gives suggestions for correct words           |
 | "i", \<c-x> s           | Gives a list with suggestions                 |
 
-<br>
 That's all folks!
