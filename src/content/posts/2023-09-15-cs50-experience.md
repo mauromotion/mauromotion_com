@@ -5,7 +5,7 @@ tags: ['programming']
 description: ''
 ---
 
-![my CS50x certificate](./_images/posts/2023-09-15-cs50-experience/CS50x_certificate.png)
+![my CS50x certificate](./_images/2023-09-15-cs50-experience/CS50x_certificate.png)
 
 After a few first months into my journey to become a developer and change my career, I stumbled upon a [blog post](https://medium.com/@austintackaberry/my-review-of-harvard-cs50-221d00d95de5) and a YouTube [video](https://www.youtube.com/watch?v=vzGllw18DkA) about this course called CS50.
 

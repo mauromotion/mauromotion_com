@@ -31,6 +31,6 @@ Also I think I've already experienced a bit of the _diminished returns effect_, 
 
 All considered though, the listening experience with the Hifiman Sundara is undeniably better - so much more _musical_ and open (and also comfortable and less fatiguing) that it's hard for me to look back now.
 
-![Hifiman Sundara, a pair of open back headphones](./_images/posts/2022-04-21-from-dt770-to-hifiman-sundara/sundaras_01.jpg)
+![Hifiman Sundara, a pair of open back headphones](./_images/2022-04-21-from-dt770-to-hifiman-sundara/sundaras_01.jpg)
 
 <figcaption>The Hifiman Sundara</figcaption>

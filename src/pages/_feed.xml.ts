@@ -9,9 +9,9 @@ import type { AstroGlobal } from 'astro';
 import type { RSSFeedItem } from '@astrojs/rss';
 const markdownParser = new MarkdownIt();
 
-// Get dynamic import of images as a map collection
+// get dynamic import of images as a map collection
 const imagesGlob = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/content/posts/_images/**/*.{jpeg,jpg,png,gif}', // Add more image formats if needed
+  '/src/content/posts/_images/**/*.{jpeg,jpg,png,gif}', // add more image formats if needed
 );
 
 export async function GET(context: AstroGlobal) {
@@ -21,74 +21,71 @@ export async function GET(context: AstroGlobal) {
 
   const feed: RSSFeedItem[] = [];
 
-  // Fetch collections and merge them
-  const blog = await getCollection('posts');
-  const now = await getCollection('now');
-  const allPosts = [...blog, ...now].sort(
-    (a, b) =>
-      Date.parse(String(b.data.pubDate)) - Date.parse(String(a.data.pubDate)),
+  // TODO: For now I have to exclude the 'now' posts from my feed, until I figure out a way to do it
+  //
+  // const blog = await getCollection('posts');
+  // const now = await getCollection('now');
+
+  // Put all posts from both the blog and tne now section together
+  // const allPosts = [...blog, ...now];
+  // const allPostsSorted = allPosts.sort(
+  //   (a, b) =>
+  //     Date.parse(String(b.data.pubDate)) - Date.parse(String(a.data.pubDate)),
+  // );
+
+  const allPosts = await getCollection('posts').then((posts) =>
+    posts.sort(
+      (a, b) =>
+        Date.parse(String(b.data.pubDate)) - Date.parse(String(a.data.pubDate)),
+    ),
   );
 
   for (const post of allPosts) {
-    // Convert markdown to HTML string
+    // convert markdown to html string
     const body = markdownParser.render(post.body);
-    // Convert HTML string to DOM-like structure
+    // convert html string to DOM-like structure
     const html = htmlParser.parse(body);
-    // Hold all <img> tags in variable images
+    // hold all img tags in variable images
     const images = html.querySelectorAll('img');
 
     for (const img of images) {
-      const src = img.getAttribute('src');
-      console.log(`Processing image: ${src}`);
+      const src = img.getAttribute('src')!;
 
-      if (!src) {
-        throw Error('Image is missing src attribute');
-      }
+      // Relative paths that are optimized by Astro build
+      if (src.startsWith('./')) {
+        // remove prefix of `./`
+        const prefixRemoved = src.replace('./', '');
+        // create prefix absolute path from root dir
+        const imagePathPrefix = `/src/content/posts/${prefixRemoved}`;
 
-      if (src.startsWith('./') || src.startsWith('../')) {
-        // Handle relative paths
-        const prefixRemoved = src.replace(/^(\.\/|\.\.\/)/, '');
-        // Determine the base directory based on the collection
-        const baseDir =
-          post.collection === 'posts'
-            ? '/src/content/posts/'
-            : '/src/content/now/';
-        const imagePathPrefix = `${baseDir}${prefixRemoved}`;
-
+        // call the dynamic import and return the module
         const imagePath = await imagesGlob[imagePathPrefix]?.()?.then(
           (res) => res.default,
         );
 
         if (imagePath) {
           const optimizedImg = await getImage({ src: imagePath });
+          // set the correct path to the optimized image
           img.setAttribute(
             'src',
             context.site + optimizedImg.src.replace('/', ''),
           );
-        } else {
-          console.warn(`Image not found in glob: ${imagePathPrefix}`);
         }
       } else if (src.startsWith('/images')) {
-        // Handle public directory images
+        // images starting with `/images/` is the public dir
         img.setAttribute('src', context.site + src.replace('/', ''));
-      } else if (src.startsWith('http://') || src.startsWith('https://')) {
-        // Handle external images
-        console.warn(`Skipping external image: ${src}`);
-        continue;
       } else {
-        // Handle unknown src formats
-        throw Error(`Unknown src format: ${src}`);
+        throw Error('src unknown');
       }
     }
 
     feed.push({
       title: post.data.title,
       pubDate: post.data.pubDate,
+      // description: post.data.description,
       categories: post.data.tags,
-      link:
-        post.collection === 'posts'
-          ? `/posts/${post.slug}`
-          : `/now/${post.slug}`,
+      link: `/posts/${post.slug}`,
+      // sanitize the new html string with corrected image paths
       content: sanitizeHtml(html.toString(), {
         allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img']),
       }),

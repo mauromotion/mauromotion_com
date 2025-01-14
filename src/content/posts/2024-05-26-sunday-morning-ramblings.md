@@ -24,6 +24,6 @@ the web right now is like this immense sprawl of a city made of these gigantic b
 
 But if you look closer, if you are curious and brave enough, you will notice how Internet-City in fact is not just those obnoxious corps buildings and malls. The Electronic City is all around, in the shadow of those giants. The city in fact is not just the buildings, but all the space in between them as well, made of the most diverse people and experiences, and stories, and places. You can do whatever you want there, and build your existence (as in personal websites, blogs, services) freely, however you like it.
 
-![a view of Canary Wharf, tall glass building around a quiet canal](./_images/posts/2024-05-26-sunday-morning-ramblings/canary_wharf_photo_2024-05-26_12-49-52.jpg)
+![a view of Canary Wharf, tall glass building around a quiet canal](./_images/2024-05-26-sunday-morning-ramblings/canary_wharf_photo_2024-05-26_12-49-52.jpg)
 
 <figcaption>A view of Canary Wharf.</figcaption>
