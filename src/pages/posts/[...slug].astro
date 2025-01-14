@@ -36,6 +36,8 @@ const { prevPost, nextPost } = Astro.props;
 ---
 
 <MarkdownPostLayout frontmatter={entry.data}>
-  <Content />
+  <article>
+    <Content />
+  </article>
   <PrevNext {prevPost} {nextPost} />
 </MarkdownPostLayout>

@@ -50,6 +50,10 @@ main {
   flex-grow: 1;
 }
 
+article p + p {
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 799px) {
   body {
     font-size: 1.05rem;

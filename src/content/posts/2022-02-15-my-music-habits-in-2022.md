@@ -103,6 +103,6 @@ If you made it to the end and are interested in the matter, wanna share some goo
 
 Until then, happy listening!
 
-![a photo of my desktop, with two monitors and a turntable](../../assets/images/posts/2022-02-15-my-music-habits-in-2022/photo_2021-04-13_11-11-07.jpg)
+![a photo of my desktop, with two monitors and a turntable](./_images/posts/2022-02-15-my-music-habits-in-2022/photo_2021-04-13_11-11-07.jpg)
 
 <figcaption>My actual setup</figcaption>
