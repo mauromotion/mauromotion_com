@@ -11,7 +11,7 @@ const markdownParser = new MarkdownIt();
 
 // Get dynamic import of images as a map collection
 const imagesGlob = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/content/posts/_images/**/*.{jpeg,jpg,png,gif}', // Add more image formats if needed
+  '/src/content/{posts,now}/_images/**/*.{jpeg,jpg,JPG,png,gif}', // Match images in both posts and now directories
 );
 
 export async function GET(context: AstroGlobal) {
@@ -21,7 +21,7 @@ export async function GET(context: AstroGlobal) {
 
   const feed: RSSFeedItem[] = [];
 
-  // Fetch collections and merge them
+  // Fetch all posts from both collections (posts and now)
   const blog = await getCollection('posts');
   const now = await getCollection('now');
   const allPosts = [...blog, ...now].sort(
@@ -34,49 +34,49 @@ export async function GET(context: AstroGlobal) {
     const body = markdownParser.render(post.body);
     // Convert HTML string to DOM-like structure
     const html = htmlParser.parse(body);
-    // Hold all <img> tags in variable images
+    // Hold all <img> tags in the variable images
     const images = html.querySelectorAll('img');
 
     for (const img of images) {
-      const src = img.getAttribute('src');
-      console.log(`Processing image: ${src}`);
+      const src = img.getAttribute('src')!;
 
-      if (!src) {
-        throw Error('Image is missing src attribute');
-      }
+      if (src.startsWith('./')) {
+        // Remove `./` prefix
+        let prefixRemoved = src.replace('./', '');
+        const collectionDir = post.collection === 'posts' ? 'posts' : 'now';
 
-      if (src.startsWith('./') || src.startsWith('../')) {
-        // Handle relative paths
-        const prefixRemoved = src.replace(/^(\.\/|\.\.\/)/, '');
-        // Determine the base directory based on the collection
-        const baseDir =
-          post.collection === 'posts'
-            ? '/src/content/posts/'
-            : '/src/content/now/';
-        const imagePathPrefix = `${baseDir}${prefixRemoved}`;
+        // Construct the image path based on the collection and remove redundant _images directory part
+        if (prefixRemoved.startsWith('_images/')) {
+          prefixRemoved = prefixRemoved.replace('_images/', '');
+        }
 
+        // Construct the correct image path
+        const imagePathPrefix = `/src/content/${collectionDir}/_images/${prefixRemoved}`;
+
+        // Call the dynamic import and return the module
         const imagePath = await imagesGlob[imagePathPrefix]?.()?.then(
           (res) => res.default,
         );
 
         if (imagePath) {
+          // Optimize the image using Astro's getImage
           const optimizedImg = await getImage({ src: imagePath });
+
+          // Set the correct path to the optimized image
           img.setAttribute(
             'src',
             context.site + optimizedImg.src.replace('/', ''),
           );
         } else {
-          console.warn(`Image not found in glob: ${imagePathPrefix}`);
+          console.warn(`Image not found: ${imagePathPrefix}`);
         }
       } else if (src.startsWith('/images')) {
-        // Handle public directory images
+        // Handle images starting with `/images/` (public directory)
         img.setAttribute('src', context.site + src.replace('/', ''));
       } else if (src.startsWith('http://') || src.startsWith('https://')) {
         // Handle external images
-        console.warn(`Skipping external image: ${src}`);
         continue;
       } else {
-        // Handle unknown src formats
         throw Error(`Unknown src format: ${src}`);
       }
     }
