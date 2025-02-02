@@ -150,6 +150,10 @@ figcaption {
 
 /* YOUR STYLES BELOW */
 
+ul ul {
+  margin-left: 2.7rem;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;

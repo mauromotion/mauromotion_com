@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = 'Changelog';
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <section id="changelog-section">
+    <h1 class="page-title">{pageTitle}</h1>
+    <p class="italic-text page-explainer">
+      Here I keep track of the changes to my personal website.
+    </p>
+    <h2>February 2025</h2>
+    <h3>- 02 -</h3>
+    <ul>
+      <li>
+        Replaced the serif font <a
+          href="https://huertatipografica.com/en/fonts/cambo-ht">Cambo</a
+        > with <a href="https://adobe-fonts.github.io/source-serif/"
+          >Source Serif 4</a
+        >.
+      </li>
+      <li>Added (this) Changelog page.</li>
+    </ul>
+    <h2>January 2025</h2>
+    <h3>- 14 -</h3>
+    <ul>
+      <li>
+        Now links to images into the RSS feed.xml file have absolute paths.
+      </li>
+      <li>The RSS feed.xml shows the images correctly.</li>
+      <li>"Now" posts are now part of the feed.xml file.</li>
+    </ul>
+    <h3>- 10 -</h3>
+    <ul><li>Upgraded to Astro 5.0.</li></ul>
+    <h3>- 09 -</h3>
+    <ul>
+      <li>Added uses/ page.</li><li>Fixed margins on mobile layout.</li><li>
+        Lists are now rendering inline.
+      </li>
+      <li>Smaller fonts on mobile.</li>
+      <li>Fixed the header on mobile.</li>
+    </ul>
+  </section>
+</BaseLayout>
