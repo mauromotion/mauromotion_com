@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = 'Colophon';
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <section id="changelog-section">
+    <article>
+      <h1 class="page-title">{pageTitle}</h1>
+      <p class="italic-text page-explainer">
+        Technical details of my personal website.
+      </p>
+      <h2>How this website is made</h2>
+      <p>
+        This website is made of static files generated with the help of the <a
+          href="https://astro.build/">AstroJS</a
+        > framework.
+      </p>
+      <p>
+        I'm not using any framework for the styling though, which is made
+        entirely with vanilla CSS.
+      </p>
+      <p>
+        The only JavaScript present on the actual hosted site is the code used
+        to switch the light/dark theme, other than that what you're looking at
+        are just HTML and CSS files.
+      </p>
+      <p>
+        It's using <a href="https://fonts.bunny.net/">BunnyFonts</a>'s CDN
+        network to get fonts (and avoid Google).
+      </p>
+      <h2>Design specs</h2>
+      <p>
+        The typeface for the headings and general sans serif text is <a
+          href="https://rsms.me/inter/">Inter</a
+        >. The typeface used for paragraphs is <a
+          href="https://adobe-fonts.github.io/source-serif/">Source Serif 4</a
+        >.
+      </p>
+      <p>
+        The overall design of this website, including the colour palette, is
+        inspired by the work of <a
+          href="https://en.wikipedia.org/wiki/Dieter_Rams">Dieter Rams</a
+        >.
+      </p>
+      <h2>How this website is hosted</h2>
+      <p>
+        The website's source code is hosted on <a
+          href="https://github.com/mauromotion/mauromotion_com">GitHub</a
+        >, which is then linked to <a href="https://www.netlify.com/">Netlify</a
+        > that deals with launching the build process that generates the static files,
+        and then proceeds to host them.
+      </p>
+      <p>
+        The domain is on <a href="https://www.namecheap.com/">Namecheap</a>.
+      </p>
+      <h2>Plans for the future</h2>
+      <p>
+        The more I learn about (self) hosting and deploying the more I want to
+        move this website to a more "traditional" service. I'm thinking either <a
+          href="https://www.mythic-beasts.com/">Mythic Beasts</a
+        > or <a href="https://www.hetzner.com/">Hetzner</a>. That would be
+        pretty straight forward to do, and I won't have to rely on corporations
+        to host my personal stuff, at least.
+      </p>
+      <p></p>
+      <p>Soon™.</p>
+    </article>
+  </section>
+</BaseLayout>
