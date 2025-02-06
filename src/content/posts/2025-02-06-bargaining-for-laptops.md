@@ -7,7 +7,7 @@ description: ''
 
 My almost 8 years old Gigabyte Aero 15x left me last week, and I found myself suddenly in need of getting another laptop. Since my finances are a bit tight nowadays, I went looking for some used Thinkpads on eBay.
 
-I've never really used eBay before, but there are so many Thinkpads for sale, and those are sturdy machines that can get a beat. Also I've always wanted to get a Thinkpad.
+I've never really used eBay before, but there are so many Thinkpads for sale, and those are sturdy machines that can get a beating. Also I've always wanted to get a Thinkpad.
 And so after a few days of going through listings I spotted one that looked promising.
 I might not be that good at eBaying, but this one was selling 5 pieces of the same exact laptop's model. It had photos of it in a cardboard box, with the cord of the charger all coiled up nicely on the side of the machine. The computer itself looked perfect. The seller had few reviews but all good, and the last one was from someone that bought one of the exact same laptops I was looking at, and described it as "perfect".
 
@@ -43,6 +43,6 @@ It was the seller, who offered me another model, in his view an upgrade, for a b
 I mean, we were bargaining for a price. He offered me £50 back, I asked for £100. I was willing to get down to £75, he offered me £70, and I accepted. He then started to blabber, calling me "bro" and asking me not to leave any review, please. Please bro!
 This is a practice as old as the world I think. But somehow this morning I couldn't help but feeling bad about it. I felt like the guy leveraged my emotions to bargain, and I hated it.
 
-When I started writing this, I was aiming towards an ending about how capitalism is making us all bad people, struggling to survive and careless of one another. I realise now that, (although argument against capitalism is still valid) I can see my experience with the eBay seller just as haggling for a price. But still I'd rather buy from a store, pay a premium, have a warranty and a brand new machine, if and when possible. But mostly I'd rather not have to bargain for prices with shady people. It's fucking 2025 and I'm getting too old for this shit.
+When I started writing this, I was aiming towards an ending about how capitalism is making us all bad people, struggling to survive and careless of one another. I realise now that, (although my argument against capitalism is still valid) I can see my experience with the eBay seller just as haggling for a price. But still I'd rather buy from a store, pay a premium, have a warranty and a brand new machine, if and when possible. But mostly I'd rather not have to bargain for prices with shady people. It's fucking 2025 and I'm getting too old for this shit.
 
 In the end, I'm happy with my Thinkpad, and maybe I learned something from the experience, and I guess this is my feedback on the purchase, after all.
