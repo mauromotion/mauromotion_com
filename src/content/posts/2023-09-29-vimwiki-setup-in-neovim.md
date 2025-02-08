@@ -62,6 +62,7 @@ vim.g.vimwiki_syntax_plugins = {
 To make so that the settings are loaded properly by Neovim, at the start of the plugin, we can make use of the `init` option in lazy.nvim. Here's my `vimwiki.lua`:
 
 ````lua
+
 return {
 	"vimwiki/vimwiki",
 	init = function()
@@ -107,6 +108,7 @@ After figuring out the init section of lazy.nvim the previous workaround is mean
 As of now, my modular Neovim configuration works like this:~~
 
 ```
+
 init.lua----
 |   |   |   |
 |   |   |   keymaps.lua
