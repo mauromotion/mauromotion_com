@@ -216,6 +216,12 @@ html[data-theme='dark'] .tags a {
   border-radius: 8px;
 }
 
+@media (max-width: 799px) {
+  .astro-code {
+    font-size: 0.7rem;
+  }
+}
+
 /* Make the table take up the full width and collapse borders */
 table {
   width: 100%;
