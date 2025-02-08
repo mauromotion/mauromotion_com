@@ -206,6 +206,44 @@ html[data-theme='dark'] .tags a {
   color: var(--color-text);
   text-decoration: none;
 }
+
+.astro-code {
+  font-family: monospace;
+  font-size: 1rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+/* Make the table take up the full width and collapse borders */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Add borders to the table, header, and cells */
+table,
+th,
+td {
+  border: 1px solid var(--color-text);
+}
+
+/* Add some padding and align text in cells */
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+/* Give the header a subtle background color */
+th {
+  background-color: var(--color-text);
+  color: var(--color-background);
+}
 /* the styles are inside the individual relevant components' files */
 
 /* UTILITY */
