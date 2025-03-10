@@ -48,6 +48,7 @@ As a starting base, the app will let the user:
 - Organise further with tags.
 - Toggle the read-it-later flag for each bookmark.
 - Filter the list of bookmarks by collection, tag, read-it-later, unsorted, untagged statuses.
+- Do a basic search by keyword.
 
 <br>
 
