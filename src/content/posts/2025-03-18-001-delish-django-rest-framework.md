@@ -11,6 +11,8 @@ I'm back out of the [Django Rest Framework](https://www.django-rest-framework.or
 
 I thought it was going to be a simple matter of learning a couple of libraries and classes, but it turned out to be much more than what I expected. There are so many layers of abstraction here that I needed to take my time to wrap my mind around them.
 
+[Link to the project's source code](https://github.com/mauromotion/delish-bookmarks).
+
 ## Making new friends on the road
 
 It turns out, in hindsight, that using the DRF for my CRUD application here is _definitely_ overkill. But, hey, this is a learning experience after all; and also I can see the potential of the DRF now for bigger scenarios.
