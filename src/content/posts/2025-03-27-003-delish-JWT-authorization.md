@@ -5,6 +5,8 @@ tags: ['webdev', 'delish']
 description: ''
 ---
 
+[Link to the project's source code](https://github.com/mauromotion/delish-bookmarks).
+
 ## JWT based authentication system
 
 I know, this is overkill. But again, I'm treating this project as an opportunity to learn and apply best practices at industry standard levels.
