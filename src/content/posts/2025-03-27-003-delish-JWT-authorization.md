@@ -20,7 +20,7 @@ After a user logs in he gets the two tokens, and for any http request to the ser
 
 When the access token expires (a few minutes), we get a **401 Unauthorized** error message from the server.
 
-At that point we can send the refresh token to the server, which, if still vaild (days or monhts), will get back a new and fresh access token.
+At that point we can send the refresh token to the server, which, if still vaild (days or months), will get back a new and fresh access token.
 
 All this happens "behind the scenes", and the user experience should be therefore pretty smooth.
 
