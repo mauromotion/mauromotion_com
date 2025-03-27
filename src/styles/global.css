@@ -54,6 +54,10 @@ article p + p {
   margin-bottom: 1rem;
 }
 
+article ul {
+  margin: 1rem 0 1rem 0;
+}
+
 @media (max-width: 799px) {
   body {
     font-size: 1.05rem;
