@@ -58,6 +58,17 @@ article ul {
   margin: 1rem 0 1rem 0;
 }
 
+article p code,
+article ul code {
+  background-color: var(--color-background-secondary);
+  color: var(--color-accent-lightorange);
+  padding: 0.06em 0.3em;
+  border-radius: 3px;
+  font-style: italic;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1.15rem;
+}
+
 @media (max-width: 799px) {
   body {
     font-size: 1.05rem;
