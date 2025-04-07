@@ -1,6 +1,6 @@
 ---
 title: '004 - Delish - CSS layout, back-end refactoring'
-pubDate: 2025-04-07
+pubDate: 2025-04-07T15:47+01:00
 tags: ['webdev', 'delish']
 description: ''
 ---
@@ -13,7 +13,7 @@ It's been over a week since my last post here, as I was feeling like I didn't
 make enough progress to report.
 
 I'm not sure how my brain works 99% of the time, because I indeed made progress.
-Possibly slower than what I feel it sould have taken me, but still progress.
+Possibly slower than what I feel it should have taken me, but still progress.
 
 Let's move on.
 
@@ -41,7 +41,7 @@ The thing that consumed most of my time was once again the JWT authentication lo
 I literally woke up in the morning and found my brain thinking about all the
 flow and how to make it better.
 
-And so, by doing some research on the topic, I found out that I can encrypt any kind of data from the back-end into the JWT access token, and then decrytp it and make use of the data in the front-end.
+And so, by doing some research on the topic, I found out that I can encrypt any kind of data from the back-end into the JWT access token, and then decrypt it and make use of the data in the front-end.
 
 I can simply just add the data with the serializer in DjangoRestFramework:
 
@@ -62,8 +62,8 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
 Now the username (in the example) is encrypted into the access token.
 
-When the frontend receives the token we can decrypt it and get the username with
-a package called [jwt-decode](https://www.npmjs.com/package/jwt-decode):
+When the front-end receives the token we can decrypt it and get the username with
+a package called [JWT-decode](https://www.npmjs.com/package/jwt-decode):
 
 ```javascript
 const data = await response.json();
@@ -98,7 +98,7 @@ queries, as it's the appropriate standard pattern.
 
 ## Next moves
 
-I just need to keep cracking on right now, building components, implementig
+I just need to keep cracking on right now, building components, implementing
 logic in the back-end when needed.
 
 I'll keep the actual UI styling for later though.

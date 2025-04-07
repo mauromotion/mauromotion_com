@@ -5,7 +5,7 @@ const postsCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    pubDate: z.date(),
+    pubDate: z.coerce.date(),
     description: z.string(),
     // image: z.object({
     //   url: z.string(),
@@ -17,7 +17,7 @@ const postsCollection = defineCollection({
 const nowCollection = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string(),
+    title: z.coerce.string(),
     pubDate: z.date(),
     tags: z.array(z.string()),
     // description: z.string(),
