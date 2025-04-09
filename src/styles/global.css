@@ -44,10 +44,27 @@ body {
 
 main {
   width: min(55ch, 100% - 4rem);
-  /* width: 100%; */
-  /* max-width: 55ch; */
   margin-inline: auto;
   flex-grow: 1;
+}
+
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.75em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1.125em;
+}
+h6 {
+  font-size: 1em;
 }
 
 article p + p {
@@ -113,8 +130,6 @@ label {
 ul,
 ol {
   list-style-position: inside;
-  /* padding-left: 0.5em; */
-  /* text-indent: -0.5em; */
 }
 
 a {
