@@ -52,19 +52,19 @@ h1 {
   font-size: 2em;
 }
 h2 {
-  font-size: 1.75em;
+  font-size: 1.6em;
 }
 h3 {
-  font-size: 1.5em;
+  font-size: 1.28em;
 }
 h4 {
-  font-size: 1.25em;
+  font-size: 1.02em; /* 2 / 1.9531 */
 }
 h5 {
-  font-size: 1.125em;
+  font-size: 0.82em; /* 2 / 2.4414 */
 }
 h6 {
-  font-size: 1em;
+  font-size: 0.66em; /* 2 / 3.0518 */
 }
 
 article p + p {
