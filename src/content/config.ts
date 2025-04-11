@@ -17,8 +17,8 @@ const postsCollection = defineCollection({
 const nowCollection = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.coerce.string(),
-    pubDate: z.date(),
+    title: z.string(),
+    pubDate: z.coerce.date(),
     tags: z.array(z.string()),
     // description: z.string(),
   }),

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
+const options = { weekday:"long", day: 'numeric', month: 'long', year: 'numeric' };
+const formattedDate = frontmatter.pubDate.toLocaleDateString('en-GB', options);
 ---
 
 <style>
@@ -37,7 +39,7 @@ const { frontmatter } = Astro.props;
     <h1>{frontmatter.title}</h1>
   </div>
   <div class="post-meta">
-  <p class="post-date">{frontmatter.pubDate.toString().slice(0, 10)}</p>
+  <p class="post-date">{formattedDate}</p>
   <!-- <p><em>{frontmatter.description}</em></p> -->
 
   <div class="tags">
