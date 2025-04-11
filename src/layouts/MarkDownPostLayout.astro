@@ -2,9 +2,9 @@
 import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 const options = { weekday:"long", day: 'numeric', month: 'long', year: 'numeric' };
-const formattedDate = frontmatter.pubDate.toLocaleDateString('en-GB', options);
+let formattedDate = frontmatter.pubDate.toLocaleDateString('en-GB', options);
 // Insert comma after weekday name
-formattedDate.replace(/^(\w+)(\s)/, '$1,$2');
+formattedDate = formattedDate.replace(/^(\w+)(\s)/, '$1,$2');
 ---
 
 <style>
