@@ -9,6 +9,18 @@ const pageTitle = 'Resume';
     margin-bottom: 2rem;
   }
 
+  .pdf-wrapper {
+    width: 100%;
+    max-width: 800px; /* optional desktop cap */
+    aspect-ratio: 210 / 297; /* locks the box to A4 ratio */
+  }
+
+  .pdf-wrapper object {
+    width: 100%;
+    height: 100%;
+    display: block; /* remove inline quirks */
+  }
+
   #pdf-viewer {
     margin-top: 2rem;
   }
@@ -20,19 +32,21 @@ const pageTitle = 'Resume';
     <a id="download-link" href="/resume_webdev_mauro_di_ianni_2025.pdf"
       >Download the PDF here.</a
     >
-    <object
-      id="pdf-viewer"
-      data="/resume_webdev_mauro_di_ianni_2025.pdf#navpanes=0"
-      type="application/pdf"
-      width="100%"
-      height="1000"
-    >
-      <p>
-        Your browser doesn’t support embedded PDFs.
-        <a href="/resume_webdev_mauro_di_ianni_2025.pdf"
-          >Download the PDF instead.</a
-        >
-      </p>
-    </object>
+    <div class="pdf-wrapper">
+      <object
+        id="pdf-viewer"
+        data="/resume_webdev_mauro_di_ianni_2025.pdf#navpanes=0"
+        type="application/pdf"
+        width="100%"
+        height="1000"
+      >
+        <p>
+          Your browser doesn’t support embedded PDFs.
+          <a href="/resume_webdev_mauro_di_ianni_2025.pdf"
+            >Download the PDF instead.</a
+          >
+        </p>
+      </object>
+    </div>
   </section>
 </BaseLayout>
