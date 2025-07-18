@@ -1,0 +1,57 @@
+.table {
+  table-layout: fixed;
+  width: 80%;
+  min-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-radius: 10px;
+  background-color: var(--bg-color-2);
+}
+
+.table th,
+td {
+  padding: 1em;
+}
+
+.table tr:not(:first-child):not(:last-child) {
+  border-top: 1px solid #3d3d3d;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.table th {
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.caption {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: start;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+}
+
+.description {
+  font-style: italic;
+}
+
+.iconCol {
+  width: 60px;
+}
+
+.income {
+  color: var(--green-color);
+}
+
+th.colAmount,
+.colAmount {
+  text-align: right;
+  padding-right: 6rem;
+}
+
+.iconTrash:hover {
+  cursor: pointer;
+  color: grey;
+}

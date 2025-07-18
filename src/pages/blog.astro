@@ -20,18 +20,23 @@ allPosts.sort(
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1 class="page-title">{pageTitle}</h1>
-  <h2 id="recent-posts-title">Recent posts</h2>
-  <ul>
-    {
-      allPosts.map((post) => (
-        <BlogPost
-          url={`/posts/${post.slug}/`}
-          title={post.data.title}
-          pubDate={post.data.pubDate}
-          tags={post.data.tags}
-        />
-      ))
-    }
-  </ul>
+  <header>
+    <h1 class="page-title">{pageTitle}</h1>
+    <h2 id="recent-posts-title">Recent posts</h2>
+  </header>
+
+  <section>
+    <ul>
+      {
+        allPosts.map((post) => (
+          <BlogPost
+            url={`/posts/${post.slug}/`}
+            title={post.data.title}
+            pubDate={post.data.pubDate}
+            tags={post.data.tags}
+          />
+        ))
+      }
+    </ul>
+  </section>
 </BaseLayout>

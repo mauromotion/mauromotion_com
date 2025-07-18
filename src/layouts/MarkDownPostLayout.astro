@@ -37,6 +37,7 @@ formattedDate = formattedDate.replace(/^(\w+)(\s)/, '$1,$2');
 </style>
 
 <BaseLayout pageTitle={frontmatter.title}>
+  <header>
   <div class="post-title">
     <h1>{frontmatter.title}</h1>
   </div>
@@ -50,5 +51,8 @@ formattedDate = formattedDate.replace(/^(\w+)(\s)/, '$1,$2');
       ))}
   </div>
   </div>
+  </header>
+  <article>
   <slot />
+  </article>
 </BaseLayout>

@@ -12,13 +12,15 @@ const pageTitle = 'About me';
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
-  <section id="about-section">
+  <header>
     <h1 class="page-title">{pageTitle}</h1>
     <Image
       src={aboutImage}
       alt="A photo of me from behind while walking uphill on a mountain trail"
       id="about-image"
     />
+  </header>
+  <section id="about-section">
     <p>
       My name is Mauro and I'm an Italian citizen living in London, UK. I used
       to work as a <a href="/showreels/">motion designer</a> both in advertising
@@ -39,6 +41,8 @@ const pageTitle = 'About me';
         BIPOC communities.
       </p>
     </p>
+  </section>
+  <section>
     <h3 id="music">Music</h3>
 
     <p>
@@ -47,6 +51,8 @@ const pageTitle = 'About me';
       discover interesting new stuff pretty often in various other genres.
       Former guitar player, maybe a day I'll start playing live again?
     </p>
+  </section>
+  <section>
     <h3 id="mastodon">Mastodon</h3>
 
     <p>
@@ -58,8 +64,9 @@ const pageTitle = 'About me';
         href="https://fediverse.party/en/fediverse/">Fediverse</a
       >.
     </p>
+  </section>
+  <section>
     <h3 id="this-website">This website</h3>
-
     <p>
       The idea with this website is to create a place for things I discover and
       thougths I have in any of the fields I’m interested in. Be it web
@@ -67,6 +74,8 @@ const pageTitle = 'About me';
       or the Fediverse. And to keep hold on my own content without giving it for
       free to some evil corporation.
     </p>
+  </section>
+  <section>
     <p>
       Overall, I wish this space to become a little piece of the web for myself
       in the spirit of the <a href="https://indieweb.org/">IndieWeb</a>.

@@ -1,0 +1,77 @@
+.recap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-color-1);
+  color: white;
+  padding: 1.5rem 8.8rem;
+}
+.balanceTitle {
+  /* font-size: 1.3rem; */
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.balanceTitleSmall {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.balanceAmountTot {
+  /* font-size: 3.5rem; */
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.balanceAmount {
+  font-size: 32px;
+}
+
+.balanceIn {
+  color: var(--green-color);
+  font-weight: bold;
+}
+
+.balanceOut {
+  color: var(--red-color);
+  font-weight: bold;
+}
+.incomesExpenses {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 0.5rem;
+}
+
+.expenses {
+  background-color: var(--bg-color-2);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  width: 14rem;
+}
+
+.income {
+  background-color: var(--bg-color-2);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  width: 14rem;
+}
+
+@media (max-width: 799px) {
+  .recap {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .balanceTitle {
+    font-size: 20px;
+  }
+  .balanceAmountTot {
+    font-size: 48px;
+  }
+  .balanceTitleSmall {
+    font-size: 16px;
+  }
+  .balanceAmount {
+    font-size: 25px;
+  }
+}

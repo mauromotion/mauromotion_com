@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = 'Front End Portfolio';
+---
+
+<style>
+  header {
+    margin-bottom: 2rem;
+  }
+</style>
+
+<BaseLayout pageTitle={pageTitle}>
+  <header>
+    <h1 class="page-title">{pageTitle}</h1>
+    <p class="italic-text page-explainer">
+      Practice projects I made to learn Front End with ReactJS and vanilla CSS.
+    </p>
+  </header>
+
+  <section>
+    <a href="/budget-tracker" target="_blank">Budget Tracker</a>
+  </section>
+</BaseLayout>

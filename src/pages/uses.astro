@@ -4,14 +4,15 @@ const pageTitle = 'Uses';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <section id="uses-section">
+  <header>
     <h1 class="page-title">{pageTitle}</h1>
 
     <p class="italic-text page-explainer">
       Current software, services, and devices that I use daily (as of April
       2025).
     </p>
-
+  </header>
+  <section>
     <h2>Software</h2>
     <h3>The Fundamentals</h3>
     <ul>
@@ -117,6 +118,9 @@ const pageTitle = 'Uses';
         > as front end for Miniflux on iOS
       </li>
     </ul>
+  </section>
+
+  <section>
     <h2>Services</h2>
     <h3>Email providers</h3>
     <ul>
@@ -159,6 +163,9 @@ const pageTitle = 'Uses';
     <ul>
       <li><a href="https://bitwarden.com/">Bitwarden</a></li>
     </ul>
+  </section>
+
+  <section>
     <h2>Hardware</h2>
     <h3>Desktop PC</h3>
     <p>Custom built:</p>

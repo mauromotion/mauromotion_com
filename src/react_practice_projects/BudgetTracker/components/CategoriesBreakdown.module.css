@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2rem;
+}
+
+.table {
+  table-layout: fixed;
+  margin: 0 auto;
+  min-width: 450px;
+  border-collapse: collapse;
+  border-radius: 10px;
+  background-color: var(--bg-color-1);
+}
+
+.table th,
+td {
+  padding: 0.8em;
+}
+
+.table tr:not(:first-child):not(:last-child) {
+  border-top: 1px solid var(--bg-color-2);
+  border-bottom: 1px solid var(--bg-color-2);
+}
+
+.table th {
+  text-align: start;
+  font-weight: bold;
+  border-bottom: 1px solid var(--bg-color-2);
+}
+.caption {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: start;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+}
+
+.amount {
+  text-align: end;
+}

@@ -67,16 +67,16 @@ h6 {
   font-size: 0.66em; /* 2 / 3.0518 */
 }
 
-article p + p {
+section p + p {
   margin-bottom: 1rem;
 }
 
-article ul {
+section ul {
   margin: 1rem 0 1rem 1rem;
 }
 
-article p code,
-article ul code {
+section p code,
+section ul code {
   background-color: var(--color-background-secondary);
   color: var(--color-accent-lightorange);
   padding: 0.06em 0.3em;

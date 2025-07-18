@@ -1,0 +1,118 @@
+@import url(https://fonts.bunny.net/css?family=inter:400,600,800);
+
+/* RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* BASE STYLES */
+html {
+  hanging-punctuation: first last;
+  color-scheme: dark light;
+  /* Prevent font size inflation */
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body > :is(header, footer),
+main,
+section,
+article {
+  container-type: inline-size;
+}
+
+body {
+  min-height: 100svh;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
+main {
+  width: min(65ch, 100% - 4rem);
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+  max-width: 65ch;
+  text-wrap: pretty;
+}
+
+img,
+picture,
+svg,
+video {
+  font-style: italic;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  shape-margin: 1rem;
+}
+
+/* dialog { */
+/*   margin: auto; */
+/* } */
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+
+:root {
+  --bg-color-0: #0b0b0b;
+  --bg-color-1: #1b1b1b;
+  --bg-color-2: #28282a;
+  --text-color: #ececec;
+  --green-color: #35ff67;
+  --red-color: #ff3e8b;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background-color: var(--bg-color-0);
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.28em;
+}
+h4 {
+  font-size: 1.02em; /* 2 / 1.9531 */
+}
+h5 {
+  font-size: 0.82em; /* 2 / 2.4414 */
+}
+h6 {
+  font-size: 0.66em; /* 2 / 3.0518 */
+}

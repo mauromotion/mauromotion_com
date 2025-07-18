@@ -27,13 +27,15 @@ const { Content } = await latestNow.render();
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1 class="page-title">{pageTitle}</h1>
-  <p class="italic-text page-explainer">
-    To replace the social media updates I keep this page inspired by <a
-      href="http://sivers.org">Derek Sivers</a
-    >
-    and the <a href="https://nownownow.com/about">/now page movement</a>.
-  </p>
+  <header>
+    <h1 class="page-title">{pageTitle}</h1>
+    <p class="italic-text page-explainer">
+      To replace the social media updates I keep this page inspired by <a
+        href="http://sivers.org">Derek Sivers</a
+      >
+      and the <a href="https://nownownow.com/about">/now page movement</a>.
+    </p>
+  </header>
   <Content />
   <div id="previous-updates">
     <h2 id="previous-updates-title">Previous updates</h2>
