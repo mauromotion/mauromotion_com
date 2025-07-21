@@ -7,7 +7,6 @@ import Header from './components/Header.jsx';
 import TransactionsTable from './components/TransactionsTable.jsx';
 import ResultsBanner from './components/ResultsBanner.jsx';
 import CategoriesBreakdown from './components/CategoriesBreakdown.jsx';
-import '../styles/global.css';
 import { initialTransactions } from '../data/initialDataBudgetTracker.js';
 
 const BudgetTracker = () => {

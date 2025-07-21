@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container label {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.container fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container legend {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  padding: 0.5rem;
+}
+
+.container input {
+  color: var(--bg-color-0);
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 0.5rem;
+  border: none;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.radios {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.buttons button {
+  padding: 0.5rem 1.3rem 0.5rem 1.3rem;
+  border: 0;
+  border-radius: 20px;
+  width: 8rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+
+.results {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tipTotal,
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.tipTotalNum {
+  color: var(--red-color);
+  font-size: 2rem;
+}
+
+.totalNum {
+  color: var(--green-color);
+  font-size: 2rem;
+}
