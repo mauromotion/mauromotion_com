@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const pageTitle = 'Front End Portfolio';
+const pageTitle = 'Web Dev Portfolio';
 ---
 
 <style>
@@ -13,15 +13,14 @@ const pageTitle = 'Front End Portfolio';
   <header>
     <h1 class="page-title">{pageTitle}</h1>
     <p class="italic-text page-explainer">
-      Practice projects I made to learn Front End development with ReactJS. You
-      can find the source code <a
-        href="https://github.com/mauromotion/mauromotion_com/tree/main/src/react_practice_projects"
-        target="_blank">here</a
-      >.
+      Web development projects: frontend, fullstack, and academic work. Plus
+      some background information.
     </p>
   </header>
 
   <section>
+    <h2>Frontend (ReactJS, CSS)</h2>
+    <p>Live ReactJS applications built from scratch.</p>
     <ul>
       <li>
         <a href="/portfolio/tip-calculator" target="_blank">Tip Calculator</a>
@@ -32,5 +31,52 @@ const pageTitle = 'Front End Portfolio';
         >
       </li>
     </ul>
+  </section>
+  <section>
+    <h2>Full-stack (Django, ReactJS, CSS)</h2>
+    <p>
+      <b>Ongoing project.</b> Here's the GitHub link to the app I'm building in public:
+      Delish, a full-stack bookmarking application with Django backend and ReactJS
+      frontend.
+    </p>
+    <ul>
+      <li>
+        <a href="https://github.com/mauromotion/delish-bookmarks"
+          >Delish - Save your Bookmarks</a
+        >
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Academic (Flask, Django, JavaScript, CSS)</h2>
+    <p>
+      For academic honesty I can't open the source code of my Harvard's CS50
+      projects. Instead I'm linking here to the video presentations I did for
+      each project.
+    </p>
+    <ul>
+      <li>
+        <a href="https://peertube.tv/w/7AZzHBTtCuWDWcEXoWpuWB"
+          >CS50x Final Project - Steam Game Picker (Flask web app with Steam API
+          integration)</a
+        >
+      </li><li>
+        <a href="https://www.youtube.com/watch?v=Drs3QUh3-XY"
+          >CS50w Capstone Project - Bookmarks-50 (Django social bookmarking
+          platform)</a
+        >
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Background</h2><p>
+      Not strictly relevant to Web Development but I have a previous career of
+      over 12 years as a Motion Designer, in tech and advertisement industries.
+    </p>
+    <ul><li><a href="/showreels">Motion Design Showreels</a></li></ul>
+    <p>
+      Also, this portfolio/website has been designed in Figma, and built from
+      scratch with Astro.
+    </p>
   </section>
 </BaseLayout>
