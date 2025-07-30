@@ -9,8 +9,8 @@ export const initialTransactions = [
   },
   {
     id: '2d05d418-822a-428f-8234-969f5dcd6ce0',
-    amount: 0.4,
-    description: 'test',
+    amount: 125.4,
+    description: 'Gas bill',
     category: 'Utilities',
     type: 'expense',
     date: '2025-07-16',
@@ -18,7 +18,7 @@ export const initialTransactions = [
   {
     id: '60e33dd3-d25a-4e7a-a562-3959c151ed76',
     amount: 456,
-    description: 'test',
+    description: 'Flat',
     category: 'Rent',
     type: 'expense',
     date: '2025-07-11',
@@ -34,7 +34,7 @@ export const initialTransactions = [
   {
     id: 'f2829c53-2fbf-435e-a0c3-cd6e561f56b0',
     amount: 123,
-    description: 'test',
+    description: 'Sainsburys',
     category: 'Groceries',
     type: 'expense',
     date: '2025-07-08',
@@ -58,7 +58,7 @@ export const initialTransactions = [
   {
     id: '347c283c-4653-4e1c-abc4-e75a2fe8972e',
     amount: 20,
-    description: 'test',
+    description: 'eBay',
     category: 'Sales',
     type: 'expense',
     date: '2025-07-02',
