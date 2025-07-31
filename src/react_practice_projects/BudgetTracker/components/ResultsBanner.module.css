@@ -5,6 +5,7 @@
   background-color: var(--bg-color-1);
   color: white;
   padding: 1.5rem 8.8rem;
+  gap: 2rem;
 }
 .balanceTitle {
   /* font-size: 1.3rem; */
@@ -73,5 +74,8 @@
   }
   .balanceAmount {
     font-size: 25px;
+  }
+  .incomesExpenses {
+    flex-direction: column;
   }
 }

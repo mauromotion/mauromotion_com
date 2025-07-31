@@ -1,7 +1,12 @@
+.container {
+  overflow-x: auto;
+  margin: 0;
+}
+
 .table {
-  table-layout: fixed;
+  table-layout: auto;
   width: 80%;
-  min-width: 1000px;
+  /* min-width: 500; */
   margin: 0 auto;
   border-collapse: collapse;
   border-radius: 10px;
@@ -51,7 +56,17 @@ th.colAmount,
   padding-right: 6rem;
 }
 
+.iconTrash {
+  color: grey;
+}
+
 .iconTrash:hover {
   cursor: pointer;
-  color: grey;
+  color: var(--text-color);
+}
+
+@media (max-width: 799px) {
+  .table {
+    margin-left: 2.2rem;
+  }
 }

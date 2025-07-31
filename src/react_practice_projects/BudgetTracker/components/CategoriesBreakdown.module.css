@@ -3,12 +3,13 @@
   justify-content: space-between;
   align-items: flex-start;
   margin: 2rem;
+  gap: 1rem;
 }
 
 .table {
-  table-layout: fixed;
+  table-layout: auto;
   margin: 0 auto;
-  min-width: 450px;
+  /* min-width: 450px; */
   border-collapse: collapse;
   border-radius: 10px;
   background-color: var(--bg-color-1);
@@ -40,4 +41,10 @@ td {
 
 .amount {
   text-align: end;
+}
+
+@media (max-width: 799px) {
+  .container {
+    flex-direction: column;
+  }
 }

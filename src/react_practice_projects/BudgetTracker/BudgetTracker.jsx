@@ -1,6 +1,4 @@
 //TODO: responsive css
-//TODO: write data to pre-fill the app
-//TODO: deploy to website
 import { useState, useEffect, useRef } from 'react';
 import ModalAddTransaction from './components/ModalAddTransaction.jsx';
 import Header from './components/Header.jsx';
