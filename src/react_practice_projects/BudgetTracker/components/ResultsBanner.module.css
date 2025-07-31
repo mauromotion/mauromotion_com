@@ -46,16 +46,18 @@
 
 .expenses {
   background-color: var(--bg-color-2);
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 10px;
   width: 14rem;
+  text-align: center;
 }
 
 .income {
   background-color: var(--bg-color-2);
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 10px;
   width: 14rem;
+  text-align: center;
 }
 
 @media (max-width: 799px) {
