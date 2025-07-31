@@ -67,6 +67,6 @@ th.colAmount,
 
 @media (max-width: 799px) {
   .table {
-    margin-left: 2.2rem;
+    margin: 1rem 1rem;
   }
 }
