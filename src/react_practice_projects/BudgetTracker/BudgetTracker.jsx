@@ -1,4 +1,3 @@
-//TODO: responsive css
 import { useState, useEffect, useRef } from 'react';
 import ModalAddTransaction from './components/ModalAddTransaction.jsx';
 import Header from './components/Header.jsx';

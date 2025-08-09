@@ -130,6 +130,7 @@ label {
 ul,
 ol {
   list-style-position: inside;
+  margin: 1rem 0;
 }
 
 a {
