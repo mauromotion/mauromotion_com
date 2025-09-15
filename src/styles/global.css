@@ -238,6 +238,11 @@ html[data-theme='dark'] .tags a {
   text-decoration: none;
 }
 
+/* Add space between paragraphs in blog posts */
+article p {
+  margin: 0.8rem 0;
+}
+
 .astro-code {
   font-family: monospace;
   font-size: 1rem;
