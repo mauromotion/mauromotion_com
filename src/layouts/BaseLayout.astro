@@ -49,26 +49,27 @@ const { pageTitle } = Astro.props;
         color-scheme: light;
       }
 
-      @media (prefers-color-scheme: dark), :root[data-theme='auto'] {
-        :root {
+      /* auto (or unset): follow the system setting */
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme='light']):not([data-theme='dark']) {
           --color-background: #242424;
           --color-background-secondary: #2d2c2b;
           --color-text: #efe8e3;
           --color-text-alternate: #242424;
           --color-accent-orange: #e66937;
-          /* --color-accent-lightorange: #e66937; */
           --color-accent-lightorange: #f0b979;
           --color-accent-cyan: #9dceca;
           color-scheme: dark;
         }
       }
+
+      /* explicit dark */
       :root[data-theme='dark'] {
         --color-background: #242424;
         --color-background-secondary: #2d2c2b;
         --color-text: #efe8e3;
         --color-text-alternate: #242424;
         --color-accent-orange: #e66937;
-        /* --color-accent-lightorange: #e66937; */
         --color-accent-lightorange: #f0b979;
         --color-accent-cyan: #9dceca;
         color-scheme: dark;
