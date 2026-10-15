@@ -1,8 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
-// import { Content as LatestPost } from '../content/now/2024-05-23-now.md';
+
 const allPosts = await getCollection('now');
 const pageTitle = 'Now';
 
@@ -13,7 +13,7 @@ allPosts.sort(
 );
 const latestNow = allPosts[0];
 const allPostsMinusLatest = allPosts.slice(1);
-const { Content } = await latestNow.render();
+const { Content } = await render(latestNow);
 ---
 
 <style>
