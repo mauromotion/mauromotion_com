@@ -84,7 +84,7 @@ export async function GET(context: AstroGlobal) {
       pubDate: post.data.pubDate,
       // description: post.data.description,
       categories: post.data.tags,
-      link: `/posts/${post.slug}`,
+      link: `/posts/${post.id}`,
       // sanitize the new html string with corrected image paths
       content: sanitizeHtml(html.toString(), {
         allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img']),
