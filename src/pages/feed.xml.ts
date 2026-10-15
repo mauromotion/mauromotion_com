@@ -86,9 +86,7 @@ export async function GET(context: AstroGlobal) {
       pubDate: post.data.pubDate,
       categories: post.data.tags,
       link:
-        post.collection === 'posts'
-          ? `/posts/${post.slug}`
-          : `/now/${post.slug}`,
+        post.collection === 'posts' ? `/posts/${post.id}` : `/now/${post.id}`,
       content: sanitizeHtml(html.toString(), {
         allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img']),
       }),
