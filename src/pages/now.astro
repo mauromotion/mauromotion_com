@@ -43,10 +43,9 @@ const { Content } = await render(latestNow);
       {
         allPostsMinusLatest.map((post) => (
           <BlogPost
-            url={`/nows/${post.slug}/`}
+            url={`/nows/${post.id}/`}
             title={post.data.title}
             pubDate={post.data.pubDate}
-            tags={post.data.tags}
             showTags={false}
           />
         ))

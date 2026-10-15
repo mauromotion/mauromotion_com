@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import MarkdownPostLayout from '../../layouts/MarkDownPostLayout.astro';
 import PrevNext from '../../components/PrevNext.astro';
 
@@ -14,7 +14,7 @@ export async function getStaticPaths() {
   const numberOfPosts = blogEntries.length;
 
   return blogEntries.map((entry, i) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: {
       entry,
       prevPost:
@@ -30,9 +30,8 @@ export async function getStaticPaths() {
   }));
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
-const { prevPost, nextPost } = Astro.props;
+const { entry, prevPost, nextPost } = Astro.props;
+const { Content } = await render(entry);
 ---
 
 <MarkdownPostLayout frontmatter={entry.data}>

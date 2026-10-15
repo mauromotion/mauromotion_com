@@ -1,41 +1,23 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import type { GetStaticPaths, Page } from 'astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogPost from '../../components/BlogPost.astro';
 
-import type { GetStaticPaths } from 'astro';
-
-interface Post {
-  data: {
-    title: string;
-    pubDate: string;
-    tags: string[];
-  };
-  slug: string;
-}
-interface Pagination {
-  currentPage: number;
-  lastPage: number;
-  data: Post[];
-}
-
 interface Props {
-  page: Pagination;
+  page: Page<CollectionEntry<'posts'>>;
 }
 
-export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+export const getStaticPaths = (async ({ paginate }) => {
   const allPosts = await getCollection('posts');
   const orderedPosts = allPosts.sort(
-    (a, b) =>
-      Date.parse(String(b.data.pubDate)) - Date.parse(String(a.data.pubDate)),
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
   );
 
   return paginate(orderedPosts, { pageSize: 10 });
-};
+}) satisfies GetStaticPaths;
 
-// const { page }: { page: Pagination } = Astro.props;
-const { page } = Astro.props as Props;
-
+const { page } = Astro.props;
 const pageTitle = `Blog - Page ${page.currentPage}`;
 ---
 
@@ -73,7 +55,7 @@ const pageTitle = `Blog - Page ${page.currentPage}`;
     {
       page.data.map((post) => (
         <BlogPost
-          url={`/posts/${post.slug}/`}
+          url={`/posts/${post.id}/`}
           title={post.data.title}
           pubDate={post.data.pubDate}
           tags={post.data.tags}

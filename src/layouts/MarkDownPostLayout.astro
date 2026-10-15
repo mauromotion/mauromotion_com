@@ -1,7 +1,12 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-const { frontmatter } = Astro.props;
-const options = { weekday:"long", day: 'numeric', month: 'long', year: 'numeric' };
+const { frontmatter, showTags = true } = Astro.props;
+const options = {
+  weekday: 'long',
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+};
 let formattedDate = frontmatter.pubDate.toLocaleDateString('en-GB', options);
 // Insert comma after weekday name
 formattedDate = formattedDate.replace(/^(\w+)(\s)/, '$1,$2');
@@ -25,7 +30,6 @@ formattedDate = formattedDate.replace(/^(\w+)(\s)/, '$1,$2');
     justify-content: flex-start;
     /* gap: 1rem; */
     margin-bottom: 2rem;
-
   }
 
   @media (max-width: 799px) {
@@ -33,7 +37,6 @@ formattedDate = formattedDate.replace(/^(\w+)(\s)/, '$1,$2');
       font-size: 1rem;
     }
   }
-
 </style>
 
 <style is:global>
@@ -44,19 +47,24 @@ formattedDate = formattedDate.replace(/^(\w+)(\s)/, '$1,$2');
 
 <BaseLayout pageTitle={frontmatter.title}>
   <header>
-  <div class="post-title">
-    <h1>{frontmatter.title}</h1>
-  </div>
-  <div class="post-meta">
-  <p class="post-date">{formattedDate}</p>
-  <!-- <p><em>{frontmatter.description}</em></p> -->
-
-  <div class="tags">
-    {frontmatter.tags.map((tag: string) => (
-    <p class="tag"><a href=`/tags/${tag}`>{tag}</a></p>
-      ))}
-  </div>
-  </div>
+    <div class="post-title">
+      <h1>{frontmatter.title}</h1>
+    </div>
+    <div class="post-meta">
+      <p class="post-date">{formattedDate}</p>
+      <!-- <p><em>{frontmatter.description}</em></p> -->
+      {
+        showTags && frontmatter.tags?.length > 0 && (
+          <div class="tags">
+            {frontmatter.tags.map((tag: string) => (
+              <p class="tag">
+                <a href={`/tags/${tag}`}>{tag}</a>
+              </p>
+            ))}
+          </div>
+        )
+      }
+    </div>
   </header>
   <slot />
 </BaseLayout>
